@@ -4,7 +4,8 @@ const ResturantName = () => {
   
   return (
     <>
-    <h1 className='resturant-name'>ResturantName</h1>
+    <div className='title-bg'>S</div>
+    <div className='resturant-name'>R</div>
     </>
   )
 }

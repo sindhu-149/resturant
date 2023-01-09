@@ -4,15 +4,15 @@ const MenuCards = (props) => {
     
     const num = props.number
   return (
-    <div className='cardsList'>
+    <div className='menu-card-list'>
         {cards.slice(0,num).map(card =>
-         (<h1 className='card'>{card}</h1>
+         (<h1 className='menu-card'>{card}</h1>
          ))}
         
     </div>
   )
 }
 
-const totalCards =MenuCards.length
+const totalCards = MenuCards.length
 
 export default MenuCards

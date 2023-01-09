@@ -23,7 +23,7 @@ const Category = () => {
 
     <div  className= "category" onClick={handleClick}>
       <p>menu</p>
-      <p  style={{display: text}}>
+      <p  className='menucards-list' style={{display: text}}>
       <MenuCards />
        
        </p>

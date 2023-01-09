@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import{ Card  , totalCards}from '../Card'
 
 const MostPopular = () => {
-  const [wrap, setWrap] = useState("5")
+  const [wrap, setWrap] = useState("9")
   const [toogle,setToggle] = useState("false")
 
 function handleClick(){
@@ -11,7 +11,7 @@ function handleClick(){
     setToggle("true")
   }
   else{
-    setWrap("5")
+    setWrap("9")
     setToggle("false")
   }
 }
@@ -22,12 +22,14 @@ function handleClick(){
       <p className='head-name'>most popular</p>
       <p 
       className='view-btn'
+      
       onClick={handleClick}
       >view all</p>
     </div>
     <div  className='list' 
     >
       <Card number={wrap} />
+  
     </div>
     
     </div>
