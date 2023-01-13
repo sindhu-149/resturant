@@ -19,16 +19,18 @@ const Category = () => {
   }
   
 
+
   return (
 
     <div  className= "category" onClick={handleClick}>
       <p>menu</p>
+
       <p  className='menucards-list' style={{display: text}}>
       <MenuCards />
        
        </p>
     </div>
-
+   
   )
 }
 

@@ -23,7 +23,8 @@ function handleClick(){
     <div className='menu'> 
 
 <div className='head'>
-      <p className='head-name'>most popular</p>
+
+      <p className='head-name'>Menu</p>
       <p 
       onClick={handleClick}
       className='view-btn'
@@ -31,6 +32,7 @@ function handleClick(){
     </div>
     {a.slice(0,wrap).map(cat =>(
       <Category />
+      
     ))}
     </div>
   )

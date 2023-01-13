@@ -2,16 +2,19 @@ import React, { useState } from 'react'
 import{ Card  , totalCards}from '../Card'
 
 const MostPopular = () => {
-  const [wrap, setWrap] = useState("9")
+  const [num, setNum] = useState("9")
+  // const [wrap, setWrap] = useState("no-wrap")
   const [toogle,setToggle] = useState("false")
 
 function handleClick(){
   if (toogle === "false"){
-    setWrap(totalCards)
+    setNum(totalCards)
+    // setWrap("wrap")
     setToggle("true")
   }
   else{
-    setWrap("9")
+    setNum("9")
+    // setWrap("no-wrap")
     setToggle("false")
   }
 }
@@ -19,7 +22,7 @@ function handleClick(){
   return (
     <div className='most-popular'>
     <div className='head'>
-      <p className='head-name'>most popular</p>
+      <p className='head-name'>Most Popular</p>
       <p 
       className='view-btn'
       
@@ -28,7 +31,7 @@ function handleClick(){
     </div>
     <div  className='list' 
     >
-      <Card number={wrap} />
+      <Card  number={num} />
   
     </div>
     
