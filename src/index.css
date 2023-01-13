@@ -383,4 +383,13 @@ body::-webkit-scrollbar {
 .title-bg-type{
   width: 300px;
 }
+.title-bg-type-test{
+
+  border-radius:5px;
+  padding:5px;
+
+  font-size: 13px;
+
+ 
+}
 }
