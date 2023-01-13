@@ -72,6 +72,7 @@ body::-webkit-scrollbar {
     border-radius:5px;
     padding:10px;
     background-color: #ECECEC;
+    font-size: 15px;
 
    
 }
