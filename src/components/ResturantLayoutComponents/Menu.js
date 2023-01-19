@@ -1,6 +1,22 @@
 import React, {useState} from 'react'
 
 import Category from './Category'
+
+import numberOfCategory from "../../WOTM_TheRedBox_Gajuwaka.json" 
+
+// let categories = numberOfCategory.map( ({Category}) => ({Category}))
+
+// let cata = categories.map(JSON.stringify)
+
+// cata = new Set(cata) 
+
+// cata = Array.from(cata).map(JSON.parse)
+
+// console.log(cata);
+
+
+
+ 
 const Menu = () => {
 
   const [wrap, setWrap] = useState("2")
@@ -8,7 +24,7 @@ const Menu = () => {
 
 function handleClick(){
   if (toogle === "false"){
-    setWrap("5")
+    setWrap("7")
     setToggle("true")
   }
   else{
@@ -17,8 +33,13 @@ function handleClick(){
   }
 }
   
+let result = numberOfCategory.map(a => a.Category)
+result = new Set(result) 
+result = Array.from(result)
 
-  const a= [1,2,3,4,5]
+// console.log(result); 
+
+
   return (
     <div className='menu'> 
 
@@ -27,11 +48,11 @@ function handleClick(){
       <p className='head-name'>Menu</p>
       <p 
       onClick={handleClick}
-      className='view-btn'
-      >view all</p>
+      className='view-btn' 
+      >view all</p> 
     </div>
-    {a.slice(0,wrap).map(cat =>(
-      <Category />
+    {result.slice(0,wrap).map(cat =>(
+      <Category name={cat} />
       
     ))}
     </div>

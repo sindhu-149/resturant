@@ -3,7 +3,7 @@ import MenuCards from '../MenuCards'
 
 
 
-const Category = () => {
+const Category = (props) => {
   const [text,setText] = useState("none")
   const [toggle, setToggle] = useState("false")
 
@@ -21,9 +21,9 @@ const Category = () => {
 
 
   return (
-
-    <div  className= "category" onClick={handleClick}>
-      <p>menu</p>
+    
+    <div className= "category" onClick={handleClick}>
+      <p style={{textAlign:"start", paddingLeft:"30px"}}> {props.name}</p>
 
       <p  className='menucards-list' style={{display: text}}>
       <MenuCards />
