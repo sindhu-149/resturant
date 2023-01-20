@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBar from './SideBar'
 import MenuContainer from './MenuContainer'
+import Cart from './Cart'
 
 const Container = () => {
   
@@ -9,6 +10,7 @@ const Container = () => {
     {/* <p>sindhu</p> */}
     <SideBar />
     <MenuContainer />
+    <Cart />
     </div>
   )
 }

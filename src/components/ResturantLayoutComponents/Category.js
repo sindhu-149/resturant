@@ -26,7 +26,7 @@ const Category = (props) => {
       <p style={{textAlign:"start", paddingLeft:"30px"}}> {props.name}</p>
 
       <p  className='menucards-list' style={{display: text}}>
-      <MenuCards />
+      <MenuCards name = {props.name}/>
        
        </p>
     </div>
