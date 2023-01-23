@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 import Category from './Category'
 
-import numberOfCategory from "../../WOTM_TheRedBox_Gajuwaka.json" 
+// import numberOfCategory from "../../WOTM_TheRedBox_Gajuwaka.json" 
 
 // let categories = numberOfCategory.map( ({Category}) => ({Category}))
 
@@ -35,7 +35,8 @@ function handleClick(){
   }
 }
   
-let result = numberOfCategory.map(a => a.Category)
+// let result = numberOfCategory.map(a => a.Category)
+let result = data.map(a => a.Category)
 result = new Set(result) 
 result = Array.from(result)
 

@@ -24,39 +24,57 @@ const MenuCards = (props) => {
                 <div 
                     style={{
                     textAlign:"start",
-                    padding:"0px"
+                    // padding:"0px",
+                    border:"0px solid red",
+                    // width:"100px",
+                    // height:"50px"
                     }} 
-                  className='menu-card'>
+                  className='menu-card'
+                  >
 
                      
-                  <img  style={{border:"0px solid orange", padding:"5px"}}
+                  <img  style={{border:"0px solid orange", padding:"8px 10px"}}
           
                      src= {a.Vegan === 'TRUE' ? "https://img.icons8.com/color/512/vegetarian-food-symbol.png" : (a.Vegan === 'FALSE' ? "https://img.icons8.com/color/512/non-vegetarian-food-symbol.png" :" ")} 
                   className='veg-nonveg'></img>
-
-                      <div style={{border:"0px solid red"  ,padding:"0px 5px 15px 20px", fontWeight:"bold"}}>{a.Name}</div>
-                      <div style={{border:"0px solid yellow", padding:"0px 5px 15px 20px"}} >hello this is the item u have ordered</div>
-                      <div style={{border:"0px solid pink", padding:"0px 5px 15px 20px"}} >{a.Price}</div>
+                      <p  style={{margin:"3px 0px",fontWeight:"bold",padding:"0px 20px"}}>{a.Name}</p>
+                      <p style={{margin:" 3px 0px",padding:"0px 20px"}}>hello this is the item u have ordered</p>
+                      <p style={{margin:"3px 0px",padding:"0px 20px"}}>{a.Price}</p>
+                      {/* <div style={{border:"2px solid blue"  ,padding:"0px 5px 15px 20px", fontWeight:"bold"}}>{a.Name}</div>
+                      <div style={{border:"2px solid yellow", padding:"0px 5px 15px 20px"}} >hello this is the item u have ordered</div>
+                      <div style={{border:"2px solid pink", padding:"0px 5px 15px 20px"}} >{a.Price}</div> */}
 
                 </div>
 
-                <div  className='menu-card'>
-                    <img  className=' menu-card-image '  src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg" alt="biryani"></img>
+                <div  className='menu-card' style={{border:"0px solid red",padding:"0",margin:"auto"}}>
+                    {/* <img  className=' menu-card-image '  src={a.Image ? a.Image : ""}  alt="biryani"></img> */}
+                    {a.Image &&
+                      <img  className=' menu-card-image '  src={a.Image} alt="dish image"></img>
+                    }
                 </div>
                 
-                <Link to={`/${a.id}`} >
-                
-                <div style={{ position:"relative" }} className='menu-card' 
+
+                <div className='menu-card' 
+
+                style={{ border:"0px solid red",position:"relative"}}
                 onClick={ () =>
                 onAdd(a) }
                 >
+                <Link to={`resturant/${a.id}`} >
+               
+                
             
                  <img  
                   className='menucard-image'
+                  style={{
+                   
+                    
+                    }} 
                    
                   src='https://cdn-icons-png.flaticon.com/128/1656/1656850.png' ></img>
+                  </Link>
                </div>
-               </Link>
+              
 
             </div>
             

@@ -58,23 +58,25 @@ const Cart = (props) => {
                     // border:"6px solid green"
                     }}  
                 >
-            <Link to={`/${item.id}`} > 
+            <Link to={`resturant/${item.id}`} > 
             <div  className='menu-card' 
              style={{
                     textAlign:"center",
-                    border:"3px solid black",
-                    // backgroundColor:"yellow"
-                    marginRight:"-18px",
+                    border:"0px solid lightgrey",
+                    backgroundColor:"white",
+                    marginRight:"-10px",
+                    borderRadius:"5px",
+                    padding:"6px"
                     // marginaLeft:"300px"
                     
                     }} 
             >
               <div>
-              <button style={{border:"none" ,fontSize:"20px"}} onClick={() => onRemove(item)} > - </button>
+              <button style={{border:"none" ,fontSize:"20px",backgroundColor:"white",}} onClick={() => onRemove(item)} > - </button>
               </div>  
-               {item.qty}
+              <span style={{textDecoration:"none"}}>{item.qty}</span> 
               <div>
-              <button style={{border:"none" , fontSize:"20px"}} onClick={() => onAdd(item)} className="add"> + </button>
+              <button style={{border:"none" , fontSize:"20px",backgroundColor:"white",}} onClick={() => onAdd(item)} className="add"> + </button>
               </div>
              
             </div>

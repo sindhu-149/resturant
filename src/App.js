@@ -44,8 +44,8 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={data}/>}>
-            <Route path='/:productId' element={<MenuCards />}></Route>
-            <Route path='/:productId' element={<Cart />}></Route>
+            <Route path='resturant/:productId' element={<MenuCards />}></Route>
+            <Route path='resturant/:productId' element={<Cart />}></Route>
           </Route>
         </Routes>
     </BrowserRouter>
