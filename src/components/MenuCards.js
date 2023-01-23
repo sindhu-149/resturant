@@ -1,6 +1,7 @@
 import React, { useState, useEffect }  from 'react'
 
-// import menuItems from '../WOTM_TheRedBox_Gajuwaka.json'
+
+import {Link} from 'react-router-dom'
 
 
 
@@ -8,12 +9,7 @@ import React, { useState, useEffect }  from 'react'
 const MenuCards = (props) => {
 
   const {data, onAdd} = props;
-  
-  // const [selectedMenu, setSelectedMenu] = useState({});
 
-  // const handleClick = (menu) => {
-  //   setSelectedMenu(menu);
-  // }
 
 
   return (
@@ -23,7 +19,7 @@ const MenuCards = (props) => {
         <div>
 
          {props.name === a.Category &&
-          <div   className='menu-list'>
+          <div  key={a.id} className='menu-list'>
 
                 <div 
                     style={{
@@ -48,6 +44,8 @@ const MenuCards = (props) => {
                     <img  className=' menu-card-image '  src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg" alt="biryani"></img>
                 </div>
                 
+                <Link to={`/${a.id}`} >
+                
                 <div style={{ position:"relative" }} className='menu-card' 
                 onClick={ () =>
                 onAdd(a) }
@@ -58,6 +56,7 @@ const MenuCards = (props) => {
                    
                   src='https://cdn-icons-png.flaticon.com/128/1656/1656850.png' ></img>
                </div>
+               </Link>
 
             </div>
             

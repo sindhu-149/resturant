@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link, useParams } from 'react-router-dom';
 
 const Cart = (props) => {
+    console.log(useParams());
     const {cartItems, onAdd, onRemove} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
     const taxPrice = itemsPrice * 0.14;
@@ -11,13 +13,13 @@ const Cart = (props) => {
     <div>
     {cartItems.length === 0 && <div>Cart is empty</div>}
     {cartItems.map((item) => (
-         <div className='cart-list'> 
+         <div  key={item.id} className='cart-list'> 
 
                 <div 
                     style={{
                     textAlign:"start",
                     padding:"0px",
-                    border:"6px solid pink"
+                    // border:"6px solid pink"
                     }}       
                   className='menu-card'>
 
@@ -36,8 +38,8 @@ const Cart = (props) => {
                 {/* <div  className='menu-card'>
                     <img  className=' menu-card-image '  src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg" alt="biryani"></img>
                 </div> */}
-
-
+               
+                
                 <div  className='menu-card' 
                 style={{
                     textAlign:"start",
@@ -56,7 +58,7 @@ const Cart = (props) => {
                     // border:"6px solid green"
                     }}  
                 >
-            
+            <Link to={`/${item.id}`} > 
             <div  className='menu-card' 
              style={{
                     textAlign:"center",
@@ -76,7 +78,7 @@ const Cart = (props) => {
               </div>
              
             </div>
-
+</Link> 
             
                </div>
 

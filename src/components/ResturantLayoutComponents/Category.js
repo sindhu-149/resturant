@@ -1,9 +1,11 @@
 import React , {useState} from 'react'
 import MenuCards from '../MenuCards'
-
+// import { useParams } from 'react-router-dom';
 
 
 const Category = (props) => {
+  // let params =useParams()
+  // console.log(params);
 
   const {data, onAdd} = props;
 
