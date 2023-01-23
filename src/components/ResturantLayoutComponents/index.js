@@ -7,7 +7,7 @@ import Menu from "./Menu";
 import Category from "./Category";
 import Container from "./Container";
 import Layout from "./Layout";
-
+import Cart from "./Cart";
 
 export { 
     Navbar,
@@ -19,4 +19,6 @@ export {
     MostPopular,
     Menu,
     Category,
+    Cart
+
 }

@@ -1,10 +1,11 @@
 import React from 'react'
 import Layout from './ResturantLayoutComponents/Layout'
 
-const ResturantLayout = () => {
+const ResturantLayout = (props) => {
+  const {data, cartItems,onAdd,onRemove} = props;
   return (
     <div className='main'>
-        <Layout />
+        <Layout onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={data}/>
     </div>
   )
 }

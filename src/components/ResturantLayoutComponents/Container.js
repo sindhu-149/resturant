@@ -3,14 +3,14 @@ import SideBar from './SideBar'
 import MenuContainer from './MenuContainer'
 import Cart from './Cart'
 
-const Container = () => {
-  
+const Container = (props) => {
+  const {data, cartItems, onAdd, onRemove } = props;
   return (
     <div className='container' >
-    {/* <p>sindhu</p> */}
+
     <SideBar />
-    <MenuContainer />
-    <Cart />
+    <MenuContainer onAdd={onAdd} data={data} />
+    <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />
     </div>
   )
 }

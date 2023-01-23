@@ -1,11 +1,14 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Container from './Container'
-const Layout = () => {
+
+const Layout = (props) => {
+  const {data, cartItems, onAdd, onRemove} = props;
   return (
     <div className='layout'>
         <Navbar />
-        <Container />
+        <Container onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={data} />
+  
     </div>
   )
 }

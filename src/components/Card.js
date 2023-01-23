@@ -1,15 +1,15 @@
 import React from 'react'
-// import cards from "../mostPopular.json"
-import cards from   '../WOTM_TheRedBox_Gajuwaka.json'  
+
+// import cards from   '../WOTM_TheRedBox_Gajuwaka.json'  
 
 
 
 const Card = (props) => {
-    
-    // const num = props.number
+    const {data} = props;
+    const totalCards =data.length
   return (
     <div  className='cardsList'>
-        {cards.map(card =>
+        {data.map(card =>
         
          {
           return card.Popular === "TRUE" &&
@@ -33,6 +33,6 @@ const Card = (props) => {
   ) 
 }
 
-const totalCards =cards.length
 
-export { Card , totalCards}
+
+export { Card }

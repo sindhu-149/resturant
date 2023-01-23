@@ -17,7 +17,9 @@ import numberOfCategory from "../../WOTM_TheRedBox_Gajuwaka.json"
 
 
  
-const Menu = () => {
+const Menu = (props) => {
+  
+  const {data, onAdd} = props
 
   const [wrap, setWrap] = useState("2")
   const [toogle,setToggle] = useState("false")
@@ -52,7 +54,7 @@ result = Array.from(result)
       >view all</p> 
     </div>
     {result.slice(0,wrap).map(cat =>(
-      <Category name={cat} />
+      <Category  onAdd={onAdd} data={data} name={cat} />
       
     ))}
     </div>

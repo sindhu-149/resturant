@@ -1,20 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 
-import menuItems from '../WOTM_TheRedBox_Gajuwaka.json'
+// import menuItems from '../WOTM_TheRedBox_Gajuwaka.json'
 
 
 
 
 const MenuCards = (props) => {
- 
+
+  const {data, onAdd} = props;
+  
+  // const [selectedMenu, setSelectedMenu] = useState({});
+
+  // const handleClick = (menu) => {
+  //   setSelectedMenu(menu);
+  // }
+
+
   return (
 
 <div className='menu-items-container'>
-       {menuItems.map(a =>(
+       {data.map(a =>(
         <div>
 
          {props.name === a.Category &&
-          <div  className='menu-list'>
+          <div   className='menu-list'>
 
                 <div 
                     style={{
@@ -36,24 +45,18 @@ const MenuCards = (props) => {
                 </div>
 
                 <div  className='menu-card'>
-                    <img  className=' menu-card-image '  src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg" alt="image"></img>
+                    <img  className=' menu-card-image '  src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg" alt="biryani"></img>
                 </div>
                 
-                <div style={{ position:"relative" }} className='menu-card'>
+                <div style={{ position:"relative" }} className='menu-card' 
+                onClick={ () =>
+                onAdd(a) }
+                >
+            
                  <img  
-                   style = {{
-                   width:"35px",
-                   position:"absolute",
-                   top:"50%",
-                   left:"50%",
-                   transform:"translate(-50%, -50%)",
-                   marginLeft:"15px",
-                   padding:"6px",
-                   borderRadius:"10px",
-                   border:"3px solid black"
-                  }}
-
-                  src='https://cdn-icons-png.flaticon.com/128/1656/1656850.png'></img>
+                  className='menucard-image'
+                   
+                  src='https://cdn-icons-png.flaticon.com/128/1656/1656850.png' ></img>
                </div>
 
             </div>
@@ -62,11 +65,12 @@ const MenuCards = (props) => {
 
         </div>
        ))}     
+       
 
 </div>
  
  )}
 
-const totalCards = MenuCards.length
+
 
 export default MenuCards
