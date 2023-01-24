@@ -38,7 +38,7 @@ const SubCart = (props) => {
 
   
     return (
-        <div  className='cart'>
+        <div  className='cart' style={{backgroundColor:"white"}}>
           {windowWidth < 600 ? 
           <div onClick={handleClick} style={{position:"relative"}}>
           <div style={{ padding:"10px",border:"0px solid green",display:showTotal}}>
@@ -48,11 +48,13 @@ const SubCart = (props) => {
             <div style={{
                 
                 display:show,
-                backgroundColor:"white",
+                backgroundColor:"blue",
                 width:"100%",
+            //    paddingBottom:"500px",
+                margin:"0",
                 position: "absolute",
                  bottom: "0px",
-                 zIndex: "1",
+                 
                 }}>
             <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />
             </div>

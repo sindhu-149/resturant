@@ -66,12 +66,13 @@ const MenuCards = (props) => {
             
                  <img  
                   className='menucard-image'
+
                   style={{
-                   
-                    
+                   backgroundColor:"#FFC93C",
+                  
                     }} 
                    
-                  src='https://cdn-icons-png.flaticon.com/128/1656/1656850.png' ></img>
+                  src='https://cdn-icons-png.flaticon.com/512/2662/2662503.png' ></img>
                   </Link>
                </div>
               

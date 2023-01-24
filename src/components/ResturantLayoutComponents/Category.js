@@ -28,7 +28,7 @@ const Category = (props) => {
   return (
     
     <div className= "category" >
-      <p style={{textAlign:"start", paddingLeft:"30px"}} onClick={handleClick}> {props.name}</p>
+      <p style={{textAlign:"start", paddingLeft:"30px",cursor:"pointer"}} onClick={handleClick}> {props.name}</p>
 
       <p  className='menucards-list' style={{display: text}}>
       <MenuCards onAdd={onAdd} data={data} name = {props.name}/>

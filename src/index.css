@@ -332,7 +332,7 @@ body::-webkit-scrollbar {
     margin-left:5px;
     padding:6px;
     border-radius:10px;
-    border:3px solid black
+    border:0px solid black
 
 }
 .menu-card-text{
@@ -340,7 +340,7 @@ body::-webkit-scrollbar {
   width:100px;
   height: 130px;
  
-  border: 1px solid green;
+  /* border: 1px solid green; */
   /* padding: 5px; */
 }
 .g{
@@ -392,7 +392,7 @@ body::-webkit-scrollbar {
 } 
 
 .menu-items-container{
-  border: 5px solid deeppink;
+  /* border: 5px solid deeppink; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

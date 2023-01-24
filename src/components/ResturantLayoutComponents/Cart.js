@@ -26,18 +26,24 @@ const Cart = (props) => {
                     // display:"inline"
                     }} 
                    
-                  src='https://cdn-icons-png.flaticon.com/128/1656/1656850.png' ></img>
+                  src='https://cdn-icons-png.flaticon.com/512/2662/2662503.png' ></img>
 
    
    
      <h1  style={{
                     // width:"30px",
                     paddingLeft:"5px",
-                    display:"inline"
+                    display:"inline",
+                   
                     }} >Cart</h1>
     </div>
     
-    {/* {cartItems.length === 0 && <div>Cart is empty</div>} */}
+    <div style={{
+                    // width:"30px",
+                    padding:"15px 25px",
+         
+                   
+                    }}>{cartItems.length === 0 && <div>Cart is empty</div>}</div>
     <div 
     
        style={{
@@ -91,7 +97,7 @@ const Cart = (props) => {
                     // border:"6px solid green"
                     }}  
                 >
-            <Link to={`resturant/${item.id}`} > 
+            <Link style={{textDecoration:"none",color:"black"}} to={`resturant/${item.id}`} > 
             <div  className='menu-card' 
              style={{
                     textAlign:"center",
@@ -107,7 +113,7 @@ const Cart = (props) => {
               <div>
               <button style={{border:"none" ,fontSize:"20px",backgroundColor:"#FFC93C",}} onClick={() => onRemove(item)} > - </button>
               </div>  
-              <span style={{textDecoration:"none"}}>{item.qty}</span> 
+              <span >{item.qty}</span> 
               <div>
               <button style={{border:"none" , fontSize:"20px",backgroundColor:"#FFC93C",}} onClick={() => onAdd(item)} className="add"> + </button>
               </div>

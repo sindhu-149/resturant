@@ -47,11 +47,11 @@ useEffect(() => {
    
     <div className='head'>
       <p className='head-name'>Most Popular</p>
-      <p 
+      {/* <p 
       className='view-btn'
       
-      // onClick={handleClick}
-      >view all</p>
+
+      >view all</p> */}
     </div>
     <div  className='list' 
     >
