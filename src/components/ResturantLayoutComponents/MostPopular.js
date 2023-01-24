@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import{ Card  }from '../Card'
+// import React, { useState,  } from 'react';
 
 const MostPopular = (props) => {
 
@@ -22,8 +23,28 @@ const MostPopular = (props) => {
 //   }
 // }
 
+const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+const [displayText, setDisplayText] = useState('');
+
+useEffect(() => {
+  function handleResize() {
+    setWindowWidth(window.innerWidth);
+  }
+
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+ console.log(windowWidth);
+ useEffect(() => {
+  if (windowWidth < 600) {
+    setDisplayText("sindhu");
+  } else {
+    setDisplayText("school");
+  }
+}, [windowWidth]);
   return (
     <div className='most-popular'>
+   
     <div className='head'>
       <p className='head-name'>Most Popular</p>
       <p 

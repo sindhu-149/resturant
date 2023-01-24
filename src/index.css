@@ -122,7 +122,7 @@ body::-webkit-scrollbar {
   flex: 12%;
   text-align: center;
   font-weight: bold;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   /* margin-top: 30px; */
 
   
@@ -133,7 +133,12 @@ body::-webkit-scrollbar {
   /* display: block; */
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  /* padding: 10px; */
+  /* width:200px;
+  flex-shrink: 0; */
+  /* flex-wrap: wrap; */
+  width:100%;
+  flex-shrink: 0;
  
   
 }
@@ -155,7 +160,7 @@ body::-webkit-scrollbar {
 
 /* menu conatiner */
 .menu-conatiner{
-  border:3px solid deeppink;
+  /* border:3px solid deeppink; */
   text-align:center;
   flex: 60%;
   width:70%;
@@ -256,7 +261,7 @@ body::-webkit-scrollbar {
   border-radius: 25px;
   /* border-radius: 10px; */
   /* padding: 5%; */
-  margin: 0% 1%;
+  margin: 0% 1.1%;
   display: grid;
 
 }
@@ -371,7 +376,7 @@ body::-webkit-scrollbar {
   background-color: #ECECEC;
   display: grid;
   grid-template-columns: auto auto auto;
-  margin: 20px;
+  margin-bottom: 13px;
   border-radius: 18px;
   /* display: grid;
    background-color: #ECECEC;
@@ -474,15 +479,35 @@ body::-webkit-scrollbar {
 
 .cart{
   flex: 28%;
-  border: 3px solid black;
+  /* border: 3px solid black; */
+  border-radius: 20px;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+  
 }
 
-
-
+.trail-conatiner{
+  border: 6px solid black;
+  display: flex;
+  width:450px;
+  overflow: hidden;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.trail-flex{
+  width:100%;
+  font-size: 1.5rem;
+  padding:1rem;
+  text-align: center;
+  overflow: auto;
+}
 
 /* media queries */
 
 @media screen and (max-width: 680px) {
+  .trail-conatiner{
+    flex-direction: row;
+    
+  }
  .container{
   flex-direction: column;
  }
@@ -490,7 +515,13 @@ body::-webkit-scrollbar {
  .itemsList{
   flex-direction: row;
   overflow: auto;
+  flex-shrink: 0;
+  /* width:70% */
+
   
+ }
+ .sindhu{
+  background-color: yellow;
  }
 
  .itemsList::-webkit-scrollbar { 
@@ -498,8 +529,10 @@ body::-webkit-scrollbar {
   height: 0;
 }
 .item{
-  margin:10px;
-  background-color: pink;
+  margin:7px;
+  /* padding: 20px; */
+  /* font-size: 10px; */
+  /* background-color: pink; */
 }
 .title-bg{
   width:350px;
@@ -540,5 +573,9 @@ body::-webkit-scrollbar {
 .menu-card-image{
   width:100px;
   height: 100px;
+}
+.cart{
+  /* background-color: blue; */
+  margin-top: 15px;
 }
 }

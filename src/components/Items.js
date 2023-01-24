@@ -13,16 +13,28 @@ const Items = (props) => {
   // console.log(result); 
 
   return (
-    <div className='itemsList'>
+    // <div className='trail-conatiner'>
+    // <div className='trail-flex' style={{backgroundColor:"yellow"}}>sindhu</div>
+    // <div className='trail-flex' style={{backgroundColor:"green"}}>sindhu</div>
+    // <div className='trail-flex' style={{backgroundColor:"pink"}}>sindhu</div>
+    // <div className='trail-flex' style={{backgroundColor:"orange"}}>sindhu is a gggggggg</div>
+    // <div className='trail-flex' style={{backgroundColor:"violet"}}>sindhu</div>
+    // <div className='trail-flex' style={{backgroundColor:"blue"}}>sindhu</div>
+    // <div className='trail-flex' style={{backgroundColor:"grey"}}>sindhu</div>
+    // </div>
+    
+
+
+    <div className='itemsList' style={{flexShrink:"0", }}>
         {result.map(name =>(
           <div style={{textAlign:"right"}}>
-          <button className='item'>{name}</button>
+          <button  className='item'>{name}</button>
           </div>
            
         ))}
     </div>
   );
-
+  
 }  
 
 

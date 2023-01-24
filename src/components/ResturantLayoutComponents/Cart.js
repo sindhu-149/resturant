@@ -9,11 +9,44 @@ const Cart = (props) => {
     const shippingPrice = itemsPrice > 2000 ? 0 : 20;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
-    <div  className='cart' style={{backgroundColor:"white"}} >Cart
     <div>
-    {cartItems.length === 0 && <div>Cart is empty</div>}
+    {/* // <div  className='cart' style={{backgroundColor:"white"}} > */}
+     <div style={{
+      
+      // backgroundColor:"white"
+      padding:"18px 0px 0px 18px",
+     
+      
+      }}>
+     <img  
+                  // className='menucard-image'
+                  style={{
+                    width:"30px",
+                    height:"30px"
+                    // display:"inline"
+                    }} 
+                   
+                  src='https://cdn-icons-png.flaticon.com/128/1656/1656850.png' ></img>
+
+   
+   
+     <h1  style={{
+                    // width:"30px",
+                    paddingLeft:"5px",
+                    display:"inline"
+                    }} >Cart</h1>
+    </div>
+    
+    {/* {cartItems.length === 0 && <div>Cart is empty</div>} */}
+    <div 
+    
+       style={{
+        border:"0px solid pink",
+        padding:"18px"
+                    }}
+    >
     {cartItems.map((item) => (
-         <div  key={item.id} className='cart-list'> 
+         <div  key={item.id} className='cart-list' style={{border:"0px solid pink"}}> 
 
                 <div 
                     style={{
@@ -43,7 +76,7 @@ const Cart = (props) => {
                 <div  className='menu-card' 
                 style={{
                     textAlign:"start",
-                    paddingTop:"5px",
+                    padding:"50px 18px 0px 0px",
                     // border:"6px solid yellow"
                     }}  
                 >
@@ -63,7 +96,7 @@ const Cart = (props) => {
              style={{
                     textAlign:"center",
                     border:"0px solid lightgrey",
-                    backgroundColor:"white",
+                    backgroundColor:"#FFC93C",
                     marginRight:"-10px",
                     borderRadius:"5px",
                     padding:"6px"
@@ -72,11 +105,11 @@ const Cart = (props) => {
                     }} 
             >
               <div>
-              <button style={{border:"none" ,fontSize:"20px",backgroundColor:"white",}} onClick={() => onRemove(item)} > - </button>
+              <button style={{border:"none" ,fontSize:"20px",backgroundColor:"#FFC93C",}} onClick={() => onRemove(item)} > - </button>
               </div>  
               <span style={{textDecoration:"none"}}>{item.qty}</span> 
               <div>
-              <button style={{border:"none" , fontSize:"20px",backgroundColor:"white",}} onClick={() => onAdd(item)} className="add"> + </button>
+              <button style={{border:"none" , fontSize:"20px",backgroundColor:"#FFC93C",}} onClick={() => onAdd(item)} className="add"> + </button>
               </div>
              
             </div>
@@ -90,10 +123,14 @@ const Cart = (props) => {
          </div>
        
         ))}
-
+       
+        
         {cartItems.length !== 0 && (
           <>
-            <hr></hr>
+          <div style={{textAlign:"center",padding:"20px 0px",backgroundColor:"none"}}>
+        <button  style={{border:"2px solid deeppink",width:"270px",textAlign:"start",padding:"10px 7px",backgroundColor:"white",borderRadius:"30px"}}>Apply Coupon</button>
+        </div>
+            {/* <hr></hr> */}
             <div
              style={{display: "flex",
              
@@ -123,32 +160,34 @@ const Cart = (props) => {
                 {shippingPrice.toFixed(2)}
               </div>
             </div>
-
+            <hr />
             <div  style={{display: "flex",
            
-             justifyContent:"space-between",
+             justifyContent:"end",
              marginBottom:"10px"
              }}>
-              <div >
+              {/* <div >
                 <strong>Total Price</strong>
-              </div>
+              </div> */}
               <div >
                 <strong>{totalPrice.toFixed(2)}</strong>
               </div>
             </div>
-            <hr />
+           
             <div style={{textAlign:"center"}}>
-              <button  onClick={() => alert('Implement Checkout!')}>
+              <button  onClick={() => alert('Implement Checkout!')}
+              style={{border:"2px solid deeppink",width:"270px",textAlign:"center",padding:"10px 7px",backgroundColor:"white",borderRadius:"30px"}}
+              >
                 Proceed to pay
               </button>
             </div>
           </>
         )}
      
-
+</div>
 
     </div>
-    </div>
+
     
   )
 }

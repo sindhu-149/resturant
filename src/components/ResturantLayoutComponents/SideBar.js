@@ -4,9 +4,12 @@ import Items from '../Items'
 const SideBar = ( props) => {
   const {data} =props;
   return (
-    <div className='sidebar'>
+    <div>
     <h1 >Category</h1>
+    <div className='sidebar' style={{display:"flex",flexShrink:"0"}}>
+    {/* <h1 >Category</h1> */}
     <Items  data={data}/>
+    </div>
     </div>
   )
 }
