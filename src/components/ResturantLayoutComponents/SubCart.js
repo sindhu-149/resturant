@@ -48,7 +48,7 @@ const SubCart = (props) => {
             <div style={{
                 
                 display:show,
-                backgroundColor:"blue",
+                backgroundColor:"white",
                 width:"100%",
             //    paddingBottom:"500px",
                 margin:"0",

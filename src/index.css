@@ -2,7 +2,9 @@
 body{
   margin: 0 ;
   /* overflow: auto; */
-  background-color: #ECECEC;
+  /* background-color: #ECECEC; */
+  background-color: #E5E0FF;
+  font-family: 'Montserrat', sans-serif;
 }
 body::-webkit-scrollbar { 
   width: 0;
@@ -166,6 +168,7 @@ body::-webkit-scrollbar {
   width:70%;
   /* padding: 1%; */
   display: flex;
+  /* display: grid; */
   flex-direction: column;
   
 }
@@ -252,7 +255,7 @@ body::-webkit-scrollbar {
   margin-left: auto;
   margin-right: auto;
   width: 96%;
-  margin-top: 1%;
+  margin: 0.8% 0%;
 }
 .card{
   border: 0px solid black;
@@ -366,7 +369,8 @@ body::-webkit-scrollbar {
   height: 180px;
   border-radius: 18px;
   margin: 30px  40px ;
-  border:1px solid green;
+  /* border:1px solid green; */
+  /* margin:1px; */
  
   
 }
@@ -393,9 +397,13 @@ body::-webkit-scrollbar {
 
 .menu-items-container{
   /* border: 5px solid deeppink; */
+  /* background-color: aquamarine; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* width: 70%; */
+  /* padding: 0px; */
+  /* flex-grow: 1; */
 
   
   /* padding: 60px; */
@@ -429,6 +437,7 @@ body::-webkit-scrollbar {
 .menucards-list{
   /* background-color: red; */
   /* border: 3px solid green; */
+  display: flex;
   width: 99%;
   height: 400px;
   overflow: scroll;
@@ -500,7 +509,9 @@ body::-webkit-scrollbar {
   text-align: center;
   overflow: auto;
 }
-
+.indhu{
+  margin-left: 60px;
+}
 /* media queries */
 
 @media screen and (max-width: 680px) {
@@ -577,5 +588,8 @@ body::-webkit-scrollbar {
 .cart{
   /* background-color: blue; */
   margin-top: 15px;
+}
+.indhu{
+  margin-left: 30px;
 }
 }

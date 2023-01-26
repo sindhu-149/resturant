@@ -27,9 +27,11 @@ const Category = (props) => {
 
   return (
     
-    <div className= "category" >
-      <p style={{textAlign:"start", paddingLeft:"30px",cursor:"pointer"}} onClick={handleClick}> {props.name}</p>
-
+    <div  className= "category">
+     <div style={{ display:"flex", justifyContent:"space-between", padding:"8px"}}  className= "category" onClick={handleClick}>
+      <p style={{border:"0px solid red",textAlign:"start", padding:"5px 10px",cursor:"pointer", margin:"0px"}}> {props.name}</p>
+      <img  style={{border:"0px solid red",width:"30px",height:"30px",padding:"0px 10px"}} src='https://cdn-icons-png.flaticon.com/512/7996/7996254.png'></img>
+      </div>
       <p  className='menucards-list' style={{display: text}}>
       <MenuCards onAdd={onAdd} data={data} name = {props.name}/>
        

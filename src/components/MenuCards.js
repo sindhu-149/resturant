@@ -1,5 +1,6 @@
 import React, { useState, useEffect }  from 'react'
-
+import images from '../images/shopping-bag.png'
+// import images from '../images/bag.png'
 
 import {Link} from 'react-router-dom'
 
@@ -16,10 +17,16 @@ const MenuCards = (props) => {
 
 <div className='menu-items-container'>
        {data.map(a =>(
-        <div>
+        <div 
+        className='indhu'
+        style={{ 
+          // marginLeft:"60px"
+          // margin:"auto"
+          }}
+        >
 
          {props.name === a.Category &&
-          <div  key={a.id} className='menu-list'>
+          <div  key={a.id} className='menu-list' style={{margin:"10px"}}>
 
                 <div 
                     style={{
@@ -69,10 +76,14 @@ const MenuCards = (props) => {
 
                   style={{
                    backgroundColor:"#FFC93C",
+                  //  fontWeight:"5000px"
                   
                     }} 
                    
-                  src='https://cdn-icons-png.flaticon.com/512/2662/2662503.png' ></img>
+                  // src='https://cdn-icons-png.flaticon.com/512/2662/2662503.png' 
+                    src={images}
+                  ></img>
+                  
                   </Link>
                </div>
               

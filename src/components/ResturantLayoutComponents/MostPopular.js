@@ -4,7 +4,7 @@ import{ Card  }from '../Card'
 
 const MostPopular = (props) => {
 
-  const {data} = props;
+  const {data, onAdd} = props;
 
 //   const [num, setNum] = useState("9")
 //   // const [wrap, setWrap] = useState("no-wrap")
@@ -55,7 +55,7 @@ useEffect(() => {
     </div>
     <div  className='list' 
     >
-      <Card  data={data}  />
+      <Card  data={data} onAdd={onAdd} />
   
     </div>
     

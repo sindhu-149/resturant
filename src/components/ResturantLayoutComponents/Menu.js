@@ -49,12 +49,12 @@ result = Array.from(result)
 <div className='head'>
 
       <p className='head-name'>Menu</p>
-      <p 
+      {/* <p 
       onClick={handleClick}
       className='view-btn' 
-      >view all</p> 
+      >view all</p>  */}
     </div>
-    {result.slice(0,wrap).map(cat =>(
+    {result.map(cat =>(
       <Category  onAdd={onAdd} data={data} name={cat} />
       
     ))}
