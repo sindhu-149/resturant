@@ -362,6 +362,18 @@ body::-webkit-scrollbar {
   
   
 }
+
+.active{
+  background-color: yellow;
+  padding: 30px;
+  margin: 10px;
+}
+
+.inactive{
+  background-color: blue;
+  padding: 30px;
+  margin: 10px;
+}
 .menu-list{
   display: grid;
    background-color: #ECECEC;
@@ -493,7 +505,7 @@ body::-webkit-scrollbar {
   /* border: 3px solid black; */
   border-radius: 20px;
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
-  height: 800px;
+  /* height: 800px; */
   background-color: white;
   /* overflow: auto; */
   /* background-color: pink; */
