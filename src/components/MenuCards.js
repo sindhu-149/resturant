@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react'
 import images from '../images/shopping-bag.png'
 // import images from '../images/bag.png'
 
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 
 
@@ -20,13 +20,18 @@ const MenuCards = (props) => {
         <div 
         className='indhu'
         style={{ 
+          // left:"0",
+          // right:"0",
+          // marginLeft:"auto",
+          // marginRight:"auto"
           // marginLeft:"60px"
           // margin:"auto"
+          // padding:"30px"
           }}
         >
 
          {props.name === a.Category &&
-          <div  key={a.id} className='menu-list' style={{margin:"10px"}}>
+          <div  key={a.id} className='menu-list' style={{margin:"20px"}}>
 
                 <div 
                     style={{
@@ -67,7 +72,7 @@ const MenuCards = (props) => {
                 onClick={ () =>
                 onAdd(a) }
                 >
-                <Link to={`resturant/${a.id}`} >
+                {/* <Link to={`/resturant`} > */}
                
                 
             
@@ -84,7 +89,7 @@ const MenuCards = (props) => {
                     src={images}
                   ></img>
                   
-                  </Link>
+                  {/* </Link> */}
                </div>
               
 

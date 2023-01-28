@@ -38,7 +38,7 @@ const SubCart = (props) => {
 
   
     return (
-        <div  className='cart' style={{backgroundColor:"white"}}>
+        <div  className='cart' >
           {windowWidth < 600 ? 
           <div onClick={handleClick} style={{position:"relative"}}>
           <div style={{ padding:"10px",border:"0px solid green",display:showTotal}}>

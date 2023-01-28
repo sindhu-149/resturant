@@ -8,7 +8,7 @@ import MenuCards from './components/MenuCards';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  
+  const {Menu} =data
   const onAdd = (product) => {
     console.log(product)
     const exist = cartItems.find((x) => x.id === product.id);
@@ -38,17 +38,17 @@ function App() {
   };
 
   return (
-    // <div>
-    //   <ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={data}/>
-    // </div>
-    <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={data}/>}>
-            <Route path='resturant/:productId' element={<MenuCards />}></Route>
-            <Route path='resturant/:productId' element={<Cart />}></Route>
-          </Route>
-        </Routes>
-    </BrowserRouter>
+    <div>
+      <ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={Menu}/>
+    </div>
+    // <BrowserRouter>
+    //     <Routes>
+    //       <Route path="/" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={data}/>}>
+    //         <Route path='resturant/:productId' element={<MenuCards />}></Route>
+    //         <Route path='resturant/:productId' element={<Cart />}></Route>
+    //       </Route>
+    //     </Routes>
+    // </BrowserRouter>
     
   );
 }

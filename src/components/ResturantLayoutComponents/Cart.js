@@ -1,19 +1,28 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom';
+// import { Link, useParams } from 'react-router-dom';
 
 const Cart = (props) => {
-    console.log(useParams());
+    // console.log(useParams());
     const {cartItems, onAdd, onRemove} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
     const taxPrice = itemsPrice * 0.14;
     const shippingPrice = itemsPrice > 2000 ? 0 : 20;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
-    <div>
+    <div  style={{
+      //  height:"30px"
+      // backgroundColor:"pink",
+      borderRadius:"20px 20px 0px 0px"
+      
+      // padding:"18px 0px 0px 18px",
+     
+      
+      }}>
     {/* // <div  className='cart' style={{backgroundColor:"white"}} > */}
      <div style={{
       
       // backgroundColor:"white"
+      
       padding:"18px 0px 0px 18px",
      
       
@@ -48,17 +57,19 @@ const Cart = (props) => {
     
        style={{
         border:"0px solid pink",
-        padding:"18px"
+        padding:"18px",
+       
                     }}
     >
     {cartItems.map((item) => (
-         <div  key={item.id} className='cart-list' style={{border:"0px solid pink"}}> 
+         <div  key={item.id} className='cart-list' style={{border:"0px solid pink", }}> 
 
                 <div 
                     style={{
                     textAlign:"start",
                     padding:"0px",
                     // border:"6px solid pink"
+                   
                     }}       
                   className='menu-card'>
 
@@ -97,7 +108,7 @@ const Cart = (props) => {
                     // border:"6px solid green"
                     }}  
                 >
-            <Link style={{textDecoration:"none",color:"black"}} to={`resturant/${item.id}`} > 
+  
             <div  className='menu-card' 
              style={{
                     textAlign:"center",
@@ -119,7 +130,7 @@ const Cart = (props) => {
               </div>
              
             </div>
-</Link> 
+
             
                </div>
 
@@ -132,14 +143,12 @@ const Cart = (props) => {
        
         
         {cartItems.length !== 0 && (
-          <>
-          <div style={{textAlign:"center",padding:"20px 0px",backgroundColor:"none"}}>
-        <button  style={{border:"2px solid deeppink",width:"270px",textAlign:"start",padding:"10px 7px",backgroundColor:"white",borderRadius:"30px"}}>Apply Coupon</button>
-        </div>
+          <div style={{ marginTop:"40px"}}>
+         
             {/* <hr></hr> */}
             <div
              style={{display: "flex",
-             
+           
              justifyContent:"space-between",
             
              marginBottom:"10px"
@@ -182,12 +191,12 @@ const Cart = (props) => {
            
             <div style={{textAlign:"center"}}>
               <button  onClick={() => alert('Implement Checkout!')}
-              style={{border:"2px solid deeppink",width:"270px",textAlign:"center",padding:"10px 7px",backgroundColor:"white",borderRadius:"30px"}}
+              style={{border:"0px solid deeppink",width:"270px",textAlign:"center",padding:"10px 7px",backgroundColor:"#FFC93C",borderRadius:"30px"}}
               >
                 Proceed to pay
               </button>
             </div>
-          </>
+          </div>
         )}
      
 </div>

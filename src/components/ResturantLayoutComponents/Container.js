@@ -12,7 +12,7 @@ const Container = (props) => {
     <SideBar  data={data}/>
     <MenuContainer onAdd={onAdd} data={data} />
     {/* <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} /> */}
-    <SubCart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>
+    <SubCart  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>
     </div>
   )
 }

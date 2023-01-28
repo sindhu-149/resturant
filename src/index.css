@@ -332,7 +332,8 @@ body::-webkit-scrollbar {
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
-    margin-left:5px;
+    /* margin-left:5px; */
+    /* margin-right: 300px; */
     padding:6px;
     border-radius:10px;
     border:0px solid black
@@ -365,7 +366,7 @@ body::-webkit-scrollbar {
   display: grid;
    background-color: #ECECEC;
   grid-template-columns: auto auto auto;
-  width:370px;
+  width:430px;
   height: 180px;
   border-radius: 18px;
   margin: 30px  40px ;
@@ -401,6 +402,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* column-gap: 50px; */
   /* width: 70%; */
   /* padding: 0px; */
   /* flex-grow: 1; */
@@ -491,8 +493,19 @@ body::-webkit-scrollbar {
   /* border: 3px solid black; */
   border-radius: 20px;
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
-  
+  height: 800px;
+  background-color: white;
+  /* overflow: auto; */
+  /* background-color: pink; */
 }
+/* .cart::-webkit-scrollbar { 
+  width: 0;
+  height: 0;
+} */
+
+/* .subcart{
+  
+} */
 
 .trail-conatiner{
   border: 6px solid black;
@@ -509,9 +522,9 @@ body::-webkit-scrollbar {
   text-align: center;
   overflow: auto;
 }
-.indhu{
+/* .indhu{
   margin-left: 60px;
-}
+} */
 /* media queries */
 
 @media screen and (max-width: 680px) {
@@ -588,8 +601,14 @@ body::-webkit-scrollbar {
 .cart{
   /* background-color: blue; */
   margin-top: 15px;
+  /* border: 1px solid black; */
+  border-radius:0px;
+  
+  /* padding: 0; */
+  /* margin: 15px 0px; */
+  /* background-color: aqua; */
 }
-.indhu{
+/* .indhu{
   margin-left: 30px;
-}
+} */
 }

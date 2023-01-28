@@ -28,8 +28,8 @@ const Category = (props) => {
   return (
     
     <div  className= "category">
-     <div style={{ display:"flex", justifyContent:"space-between", padding:"8px"}}  className= "category" onClick={handleClick}>
-      <p style={{border:"0px solid red",textAlign:"start", padding:"5px 10px",cursor:"pointer", margin:"0px"}}> {props.name}</p>
+     <div style={{ display:"flex", justifyContent:"space-between", padding:"8px",cursor:"pointer"}}  className= "category" onClick={handleClick}>
+      <p style={{border:"0px solid red",textAlign:"start", padding:"5px 10px", margin:"0px"}}> {props.name}</p>
       <img  style={{border:"0px solid red",width:"30px",height:"30px",padding:"0px 10px"}} src='https://cdn-icons-png.flaticon.com/512/7996/7996254.png'></img>
       </div>
       <p  className='menucards-list' style={{display: text}}>
