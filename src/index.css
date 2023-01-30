@@ -93,6 +93,7 @@ body::-webkit-scrollbar {
   margin-left: auto; 
   margin-right: auto;
   /* margin: auto; */
+  background-color:bisque;
   margin-top: 250px;
   border-radius: 67%;
   
@@ -105,7 +106,7 @@ body::-webkit-scrollbar {
 
 /* container */
 .container{
-  /* border:3px solid orange; */
+  /* border:10px solid orange; */
   display:flex;
   flex-direction: row;
   margin-top: 380px;
@@ -121,7 +122,8 @@ body::-webkit-scrollbar {
 /* sidebar and items */
 .sidebar{
  
-  flex: 12%;
+  /* flex: 12%; */
+  flex: 72%;
   text-align: center;
   font-weight: bold;
   /* border: 3px solid green; */
@@ -139,8 +141,10 @@ body::-webkit-scrollbar {
   /* width:200px;
   flex-shrink: 0; */
   /* flex-wrap: wrap; */
+  text-align: end;
+  
   width:100%;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
  
   
 }
@@ -176,11 +180,14 @@ body::-webkit-scrollbar {
 /* most popular */
 .most-popular{
   /* border:4px solid deeppink; */
-  width:97%;
-  left:0;
+  /* width:20%; */
+  /* width:"auto"; */
+  /* left:0;
   right: 0;
   margin-left: auto; 
-  margin-right: auto;
+  margin-right: auto; */
+  /* width:90%; */
+  /* background-color: white; */
   display: flex;
   flex-direction: column;
   padding:1%;
@@ -254,8 +261,11 @@ body::-webkit-scrollbar {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 96%;
+  /* padding: 30px; */
+  /* width: 90%; */
+  /* text-align: end; */
   margin: 0.8% 0%;
+  /* background-color: pink; */
 }
 .card{
   border: 0px solid black;
@@ -492,7 +502,13 @@ body::-webkit-scrollbar {
   
 }
 
+.sidebar-btn{
+  /* border: 3px solid green */
+  display: flex;
+  flex-direction: column;
 
+  flex:15%;
+}
 .menucards-list::-webkit-scrollbar { 
   width: 0;
   height: 0;
@@ -501,7 +517,8 @@ body::-webkit-scrollbar {
 /* cart */
 
 .cart{
-  flex: 28%;
+  /* flex: 28%; */
+flex:20%;
   /* border: 3px solid black; */
   border-radius: 20px;
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
@@ -518,7 +535,21 @@ body::-webkit-scrollbar {
 /* .subcart{
   
 } */
-
+.change{
+  flex:80%;
+  /* border: 5px solid black; */
+  margin-right: 10px;
+   width:50%;
+   height:auto;
+   /* background-color:pink; */
+   display:flex;
+   flex-direction: row;
+   text-align: center;
+  font-weight: bold;
+}
+.total{
+  width:70%
+}
 .trail-conatiner{
   border: 6px solid black;
   display: flex;
@@ -546,9 +577,11 @@ body::-webkit-scrollbar {
   }
  .container{
   flex-direction: column;
+  /* margin:"20px" */
  }
 
  .itemsList{
+  width: 100%;
   flex-direction: row;
   overflow: auto;
   flex-shrink: 0;
@@ -566,8 +599,7 @@ body::-webkit-scrollbar {
 }
 .item{
   margin:7px;
-  /* padding: 20px; */
-  /* font-size: 10px; */
+
   /* background-color: pink; */
 }
 .title-bg{
@@ -603,7 +635,7 @@ body::-webkit-scrollbar {
  
 }
 .menu-list{
-  width:270px;
+  width:290px;
   margin: 30px  10px ;
 }
 .menu-card-image{
@@ -613,7 +645,7 @@ body::-webkit-scrollbar {
 .cart{
   /* background-color: blue; */
   margin-top: 15px;
-  /* border: 1px solid black; */
+  /* border: 10px solid deeppink; */
   border-radius:0px;
   
   /* padding: 0; */
@@ -623,4 +655,18 @@ body::-webkit-scrollbar {
 /* .indhu{
   margin-left: 30px;
 } */
+
+.change{
+  width:98%;
+  margin: 0;
+  /* border-color: blue; */
+  /* width:"auto" */
+  flex-direction: column;
+}
+.sidebar-btn{
+  flex-direction: row;
+}
+.total{
+  width:100%
+}
 }

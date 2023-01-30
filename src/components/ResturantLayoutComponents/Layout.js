@@ -3,11 +3,11 @@ import Navbar from './Navbar'
 import Container from './Container'
 
 const Layout = (props) => {
-  const {data, cartItems, onAdd, onRemove} = props;
+  const {data,res, cartItems, onAdd, onRemove} = props;
   return (
     <div className='layout'>
-        <Navbar />
-        <Container onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={data} />
+        <Navbar res={res} />
+        <Container onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}  data={data} />
   
     </div>
   )

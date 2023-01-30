@@ -39,10 +39,10 @@ const SubCart = (props) => {
   
     return (
         <div  className='cart' >
-          {windowWidth < 600 ? 
-          <div onClick={handleClick} style={{position:"relative"}}>
+          {windowWidth < 680 ? 
+          <div style={{position:"relative"}}>
           <div style={{ padding:"10px",border:"0px solid green",display:showTotal}}>
-             <p style={{margin:"0px 0px 8px 0px" ,fontWeight:"bold"}}>Total Cost</p>
+             <p   onClick={handleClick} style={{margin:"0px 0px 8px 0px" ,fontWeight:"bold"}}>Total Cost</p>
                <p style={{margin:"0",}}>{cartItems.length === 0 ? 0 : totalPrice}</p>
             </div> 
             <div style={{
@@ -54,9 +54,13 @@ const SubCart = (props) => {
                 margin:"0",
                 position: "absolute",
                  bottom: "0px",
+                 height:"600px",
+                 overflow:"auto"
                  
-                }}>
+                }} >
+            <img onClick={handleClick} src='https://cdn-icons-png.flaticon.com/512/507/507257.png' style={{width:"30px",padding:"15px 10px"}}></img>
             <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />
+            {/* <Cart /> */}
             </div>
           </div>
            

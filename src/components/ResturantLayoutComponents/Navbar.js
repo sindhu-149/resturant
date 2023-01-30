@@ -1,12 +1,10 @@
 import React from 'react'
 import ResturantName from './ResturantName'
-const Navbar = () => {
-  
+const Navbar = (props) => {
+const {res}=props
   return (
-    <div className='navbar'>
-    {/* <img  style={{width:"90%" , height:"100%"}} src='https://st.depositphotos.com/1105977/2471/i/450/depositphotos_24714647-stock-photo-pizza.jpg'></img>
-    */}
-    <ResturantName />
+    <div className='navbar'style={{ backgroundImage: `url(${res.Background})`}}>
+    <ResturantName  data={res}/>
     </div>
   )
 }

@@ -10,7 +10,7 @@ const MenuContainer = (props) => {
 
   return (
     <div className='menu-conatiner'>
-    {/* <h1 >MenuContainer</h1> */}
+
     <MostPopular data={data} onAdd={onAdd}/>
     <Menu onAdd={onAdd} data={data} />
     </div>

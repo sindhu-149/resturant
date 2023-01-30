@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 
 import Category from './Category'
 
+
 const Menu = (props) => {
   const {data, onAdd} = props
   let result = data.map(a => a.Category)
@@ -31,15 +32,8 @@ result = Array.from(result)
     }
   }
   return(
-    // <div>
-    //   {appState.objects.map((elements,index) =>(
-    //     <div className={toggleStyle(index)} key={index} onClick={ () => toggleActive(index)}>
-    //     </div>
-    //    ))}
-
   
-    // </div>
-    <div className='menu'> 
+    <div className='menu' > 
 
     <div className='head'>
     
@@ -47,15 +41,12 @@ result = Array.from(result)
 
          </div>
          {appState.objects.map((elements,index) =>(
-          <div>
-        {/* <div className={toggleStyle(index)} key={index} onClick={ () => toggleActive(index)}> */}
+          <div style={{left:"0",right:"0",marginLeft:"auto",marginRight:"auto",width:"97%" }}>
+
         <Category className={toggleStyle(index)} key={index} onClick={ () => toggleActive(index)} onAdd={onAdd} data={data} name={elements} />
         </div>
        ))}
-         {/* {result.map(cat =>(
-           <Category  onAdd={onAdd} data={data} name={cat} />
-          
-         ))} */}
+
          </div>
   )
 }

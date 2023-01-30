@@ -43,7 +43,7 @@ useEffect(() => {
   }
 }, [windowWidth]);
   return (
-    <div className='most-popular'>
+    <div className='most-popular' >
    
     <div className='head'>
       <p className='head-name'>Most Popular</p>

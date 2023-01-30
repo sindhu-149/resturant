@@ -3,8 +3,7 @@ import React, {useState} from 'react';
 import ResturantLayout from './components/ResturantLayout';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import data from './WOTM_TheRedBox_Gajuwaka.json'
-import Cart from './components/ResturantLayoutComponents/Cart';
-import MenuCards from './components/MenuCards';
+
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -39,7 +38,7 @@ function App() {
 
   return (
     <div>
-      <ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={Menu}/>
+      <ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} res={data} data={Menu}/>
     </div>
     // <BrowserRouter>
     //     <Routes>

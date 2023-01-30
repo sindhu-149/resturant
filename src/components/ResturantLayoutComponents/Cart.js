@@ -5,9 +5,9 @@ const Cart = (props) => {
     // console.log(useParams());
     const {cartItems, onAdd, onRemove} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
-    const taxPrice = itemsPrice * 0.14;
-    const shippingPrice = itemsPrice > 2000 ? 0 : 20;
-    const totalPrice = itemsPrice + taxPrice + shippingPrice;
+    // const taxPrice = itemsPrice * 0.14;
+    // const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+    // const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
     <div  style={{
       //  height:"30px"
@@ -145,49 +145,15 @@ const Cart = (props) => {
         {cartItems.length !== 0 && (
           <div style={{ marginTop:"40px"}}>
          
-            {/* <hr></hr> */}
-            <div
-             style={{display: "flex",
-           
-             justifyContent:"space-between",
+             <div  style={{display: "flex",
             
-             marginBottom:"10px"
-             }}
-             >
-              <div  >Items Price</div>
-              <div >{itemsPrice.toFixed(2)}</div>
-            </div>
-            <div  style={{display: "flex",
-            
-             justifyContent:"space-between",
-             marginBottom:"10px"
-             }}>
-              <div >Tax Price</div>
-              <div >{taxPrice.toFixed(2)}</div>
-            </div>
-            <div  style={{display: "flex",
-          
-             justifyContent:"space-between",
-             marginBottom:"10px"
-             }}>
-              <div >Shipping Price</div>
-              <div >
-                {shippingPrice.toFixed(2)}
-              </div>
-            </div>
-            <hr />
-            <div  style={{display: "flex",
-           
-             justifyContent:"end",
-             marginBottom:"10px"
-             }}>
-              {/* <div >
-                <strong>Total Price</strong>
-              </div> */}
-              <div >
-                <strong>{totalPrice.toFixed(2)}</strong>
-              </div>
-            </div>
+            justifyContent:"space-between",
+            marginBottom:"10px"
+            }}>
+            <div >Total Price</div>
+             <div >{itemsPrice.toFixed(2)}</div>
+           </div>
+   
            
             <div style={{textAlign:"center"}}>
               <button  onClick={() => alert('Implement Checkout!')}
@@ -221,3 +187,36 @@ export default Cart
             <div>
               {item.qty} x ${item.Price}
             </div> */}
+
+
+
+          //   <div  style={{display: "flex",
+            
+          //   justifyContent:"space-between",
+          //   marginBottom:"10px"
+          //   }}>
+          //    <div >Tax Price</div>
+          //    <div >{taxPrice.toFixed(2)}</div>
+          //  </div>
+          //  <div  style={{display: "flex",
+         
+          //   justifyContent:"space-between",
+          //   marginBottom:"10px"
+          //   }}>
+          //    <div >Shipping Price</div>
+          //    <div >
+          //      {shippingPrice.toFixed(2)}
+          //    </div>
+          //  </div>
+          //  <hr />
+          //  <div  style={{display: "flex",
+          
+          //   justifyContent:"end",
+          //   marginBottom:"10px"
+          //   }}>
+          //    {/* <div >
+          //      <strong>Total Price</strong>
+          //    </div> */}
+          //    <div >
+          //      <strong>{totalPrice.toFixed(2)}</strong>
+          //    </div>
