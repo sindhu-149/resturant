@@ -6,7 +6,9 @@ const ResturantName = (props) => {
   const {data}=props;
   
   return (
-    <div className='title'>
+    <div className='title'
+    // style={{backgroundImage:`url(${data.Background})`}}
+    >
     <div className='title-bg' >
      <h1>{data.Name}</h1>
      <img  style={{ width:"30px", height:"30px", margin:"-8px 15px"}} src="https://cdn-icons-png.flaticon.com/512/854/854878.png"></img>
@@ -22,8 +24,8 @@ const ResturantName = (props) => {
      
     </div>
     {/* </div> */}
-    <div className='resturant-name'>
-      {/* <img className='resturant-name-image' style={{backgroundColor:"red"}}src={data.Logo}></img> */}
+    <div className='resturant-name' >
+      <img className='resturant-name-image'  src="https://charatoon.com/photo/thum/6342.png"></img>
     </div>
     
     </div>
