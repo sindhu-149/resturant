@@ -142,7 +142,8 @@ body::-webkit-scrollbar {
   flex-shrink: 0; */
   /* flex-wrap: wrap; */
   text-align: end;
-  
+  /* background-color: yellow; */
+  margin-left:-30px;
   width:100%;
   /* flex-shrink: 0; */
  

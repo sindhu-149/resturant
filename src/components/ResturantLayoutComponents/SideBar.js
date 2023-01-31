@@ -76,7 +76,7 @@ const filterResult = (cat) => {
             <h1>Category</h1>
             {/* <p className="head-name">Category</p> */}
             <div style={{width:"100%"}}  className='itemsList' >
-              <div ><button className='item'    onClick={handleAllClick}>All</button> </div>
+              {/* <div ><button className='item'    onClick={handleAllClick}>All</button> </div> */}
            
 
               {appState.objects.map((val,index) =>(
