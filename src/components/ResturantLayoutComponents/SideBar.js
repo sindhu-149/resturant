@@ -62,6 +62,10 @@ const filterResult = (cat) => {
       // ...display,
       [index]: !display[index]
     });
+
+
+  
+
   }
   return (
     <div  className="change" >
@@ -75,29 +79,27 @@ const filterResult = (cat) => {
               <div ><button className='item'    onClick={handleAllClick}>All</button> </div>
            
 
-              {appState.objects.map(val =>(
+              {appState.objects.map((val,index) =>(
                 
                 <div >
             
-               <button  className='item'    onClick={() => filterResult(val)}>{val}</button>
+               <button  className='item'    onClick={()=>handleClick(index)}>{val}</button>
              </div>   
              ))}
          
             </div>
 
-
-        
           </div>
 
          <div className="total" style={{height:"auto",border:"0px solid blue",flex:"85%", display:"row"}}>
          <div  >
           <MostPopular data={data} onAdd={onAdd}/>
           </div>
-          <div  style={{width:"97%",padding:"10px"}} > 
-          <div className='head'>
+          <div  style={{width:"97%",padding:" 0px 10px",}} > 
+          <div  style={{padding:"20px 0px"}} className='head'>
                   <p className='head-name'>Menu</p>
           </div>
-              <div style={{ width:"97%",marginLeft:"auto",marginRight:"auto",left:"0",right:"0"}}>
+              <div style={{width:"97%",marginLeft:"auto",marginRight:"auto",left:"0",right:"0",padding:"5px 0px 0px 0px"}}>
 
                 
            

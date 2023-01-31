@@ -38,7 +38,7 @@ const SubCart = (props) => {
 
   
     return (
-        <div  className='cart' >
+        <div  className='cart' style={{height:"700px"}} >
           {windowWidth < 680 ? 
           <div style={{position:"relative"}}>
           <div style={{ padding:"10px",border:"0px solid green",display:showTotal}}>

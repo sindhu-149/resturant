@@ -33,7 +33,7 @@ const Items = (props) => {
      const {name,text,data,onAdd,onClick} = props;
   return (
 
-<div  className= "category" >
+<div  className= "category" style={{margin:"20px 0px",padding:"5px"}}>
      <div  style={{ display:"flex", justifyContent:"space-between", padding:"8px",cursor:"pointer"}}  
      onClick={onClick}
      > 

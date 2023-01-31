@@ -2,8 +2,8 @@
 body{
   margin: 0 ;
   /* overflow: auto; */
-  /* background-color: #ECECEC; */
-  background-color: #E5E0FF;
+  background-color: #ECECEC;
+  /* background-color: #E5E0FF; */
   font-family: 'Montserrat', sans-serif;
 }
 body::-webkit-scrollbar { 
