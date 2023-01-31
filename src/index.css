@@ -528,13 +528,14 @@ flex:20%;
   /* overflow: auto; */
   /* background-color: pink; */
 }
-/* .cart::-webkit-scrollbar { 
+/* .subcart::-webkit-scrollbar { 
   width: 0;
   height: 0;
 } */
 
 /* .subcart{
-  
+  border:10px solid red;
+  overflow: auto;
 } */
 .change{
   flex:80%;
@@ -648,7 +649,7 @@ flex:20%;
   margin-top: 15px;
   /* border: 10px solid deeppink; */
   border-radius:0px;
-  
+
   /* padding: 0; */
   /* margin: 15px 0px; */
   /* background-color: aqua; */
