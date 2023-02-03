@@ -38,7 +38,9 @@ const SubCart = (props) => {
 
   
     return (
-        <div  className='cart' style={{marginTop:"20px"}} >
+        <div  className='cart' style={{marginTop:"20px",
+        // position:"absolute"
+        }} >
           {windowWidth < 680 ? 
           <div style={{position:"relative"}}>
           <div style={{ padding:"10px",border:"0px solid green",

@@ -28,12 +28,12 @@ const Card = (props) => {
            className='veg-nonveg'></img>
           <div className=' item-name' style={{fontWeight:"bold", fontSize: card.Name.length < 30 ? "14px" : "12px"  ,height:"40px",padding:"3px 0px 10px 8px"}}>{card.Name}</div>
           <div  style={{ display:"flex"}}>
-          <div className=' item-name' style={{fontWeight:"bold"}}>₹{card.Price} </div>
+          <div className=' item-name' style={{fontWeight:"bold",paddingLeft:"8px",marginTop:"-15px"}}>₹{card.Price} </div>
           <div
-           style={{  border:"0px solid  #E5E0FF",width:"110px", textAlign:"end" ,marginTop:"-10px"}}
+           style={{  border:"0px solid  #E5E0FF",width:"110px", textAlign:"end" }}
            onClick={ () => onAdd(card) }>
             <img   
-            style={{ width:"26px",border:"0px solid  #7B8FA1", backgroundColor:"#FFC93C",padding:" 3px",borderRadius:"35%"}}
+            style={{ width:"26px",border:"0px solid  #7B8FA1", backgroundColor:"#FFC93C",padding:" 3px",borderRadius:"35%",marginTop:"-17px"}}
             src={image}></img>
           </div>
           </div>

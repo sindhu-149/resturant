@@ -54,6 +54,7 @@ useEffect(() => {
       >view all</p> */}
     </div>
     <div  className='list' 
+    style={{border:"0px solid green",padding:"1.5% 0%"}}
     >
       <Card  data={data} onAdd={onAdd} />
   
