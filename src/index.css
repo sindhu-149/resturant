@@ -93,7 +93,7 @@ body::-webkit-scrollbar {
   margin-left: auto; 
   margin-right: auto;
   /* margin: auto; */
-  background-color:bisque;
+  background-color:black;
   margin-top: 250px;
   border-radius: 67%;
   
@@ -613,11 +613,7 @@ flex:20%;
   margin-right: auto;
   /* margin-top: 60px; */
 }
-.resturant-name{
-  width:100px;
-  height:100px;
-  
-}
+
 .menu-conatiner{
   width:auto;
 }

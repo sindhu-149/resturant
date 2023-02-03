@@ -1,5 +1,5 @@
 import React from 'react'
-// import data from '../../WOTM_TheRedBox_Gajuwaka.json'const types= ["Pizza","Italian","Fast Foods","Western"]
+
 
 const ResturantName = (props) => {
 
@@ -7,7 +7,7 @@ const ResturantName = (props) => {
   
   return (
     <div className='title'
-    // style={{backgroundImage:`url(${data.Background})`}}
+
     >
     <div className='title-bg' >
      <h1>{data.Name}</h1>
@@ -23,7 +23,7 @@ const ResturantName = (props) => {
    </div>
      
     </div>
-    {/* </div> */}
+  
     <div className='resturant-name' >
       <img className='resturant-name-image'  src="https://charatoon.com/photo/thum/6342.png"></img>
     </div>
