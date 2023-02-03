@@ -5,9 +5,9 @@ const SubCart = (props) => {
     const {cartItems, onAdd, onRemove} = props;
 
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
-    const taxPrice = itemsPrice * 0.14;
-    const shippingPrice = itemsPrice > 2000 ? 0 : 20;
-    const totalPrice = itemsPrice + taxPrice + shippingPrice;
+    // const taxPrice = itemsPrice * 0.14;
+    // const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+    // const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [show, setShow] =useState("none")
@@ -38,12 +38,22 @@ const SubCart = (props) => {
 
   
     return (
-        <div  className='cart subcart' style={{marginTop:"20px",height:"auto"}} >
+        <div  className='cart' style={{marginTop:"20px"}} >
           {windowWidth < 680 ? 
           <div style={{position:"relative"}}>
-          <div style={{ padding:"10px",border:"0px solid green",display:showTotal}}>
-             <p   onClick={handleClick} style={{margin:"0px 0px 8px 0px" ,fontWeight:"bold"}}>Total Cost</p>
-               <p style={{margin:"0",}}>{cartItems.length === 0 ? 0 : totalPrice}</p>
+          <div style={{ padding:"10px",border:"0px solid green",
+          // display:showTotal
+          display:"flex",
+          flexDirection:"row",
+          justifyContent:"space-between"
+          }}>
+             <div style={{border:"0px solid black"}}>
+             <p   style={{margin:"0px 0px 8px 0px" ,fontWeight:"bold"}}>Total Cost</p>
+             <p style={{margin:"0",fontSize:"22px",fontWeight:"bold",color:"#434242"}}>{cartItems.length === 0 ? 0 : itemsPrice}  ₹</p>
+             </div>
+             <div style={{border:"0px solid black"}}>
+             <button  onClick={handleClick} style={{ fontSize:"20px",borderRadius:"30px",margin:"10px",fontWeight:"bolder",color:"white",backgroundColor:"#FFC93C",border:"none",padding:"10px 40px"}}>Go to cart</button>
+             </div>
             </div> 
             <div style={{
                 

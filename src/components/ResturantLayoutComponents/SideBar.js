@@ -21,6 +21,8 @@
 import React, { useState } from "react";
 import Items from "../Items";
 import MostPopular from "./MostPopular";
+
+import { HashLink as Link } from "react-router-hash-link";
 const SideBar = ( props) => {
   const {data,onAdd} =props
   let result = data.map(a => a.Category)
@@ -57,13 +59,10 @@ const filterResult = (cat) => {
     }else{
       changeState({...appState, activeObject: appState.objects[index]});
     }
-
     setDisplay({
       // ...display,
       [index]: !display[index]
     });
-
-
   
 
   }
@@ -71,11 +70,11 @@ const filterResult = (cat) => {
     <div  className="change" >
 
           <div
-             
+             style={{border:"0px solid red "}}
           >
             <h1>Category</h1>
             {/* <p className="head-name">Category</p> */}
-            <div style={{width:"100%"}}  className='itemsList' >
+            <div style={{border:"0px solid pink ",width:"100%",}}  className='itemsList' >
               {/* <div ><button className='item'    onClick={handleAllClick}>All</button> </div> */}
            
 
@@ -83,7 +82,12 @@ const filterResult = (cat) => {
                 
                 <div >
             
-               <button  className='item'    onClick={()=>handleClick(index)}>{val}</button>
+              {/* <Link  to='#Soups'><button className='item' onClick={()=>handleClick(index)}>{val}</button> 
+              </Link> */}
+
+              <Link to={`#${val}`}><button className='item' onClick={() => handleClick(index)}>{val}</button></Link>
+
+
              </div>   
              ))}
          
@@ -101,15 +105,12 @@ const filterResult = (cat) => {
           </div>
               <div style={{width:"97%",marginLeft:"auto",marginRight:"auto",left:"0",right:"0",padding:"5px 0px 0px 0px"}}>
 
-                
-           
-
                 {appState.objects.map((t, index) => (
                   <div >
-                                   <Items onClick={()=>handleClick(index)} data={data} onAdd={onAdd} name= {t} text={(display[index] || showAll || t === selectedCategory) ? "block" : "none"}/>
-                   
-                  {/* <Items name= {t} text={(display[index] || showAll || t === selectedCategory) ? "block" : "none"}/> */}
-                
+                  <Items  
+                  // onClick={(e) =>  console.log(e.target)} 
+                  onClick={()=>handleClick(index)} 
+                  data={data} onAdd={onAdd} name= {t} text={(display[index] || showAll || t === selectedCategory) ? "block" : "none"}/>
                 </div>
               ))}
        </div>

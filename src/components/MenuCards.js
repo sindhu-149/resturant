@@ -50,8 +50,11 @@ const MenuCards = (props) => {
                      src= {a.Vegan === 'TRUE' ? "https://img.icons8.com/color/512/vegetarian-food-symbol.png" : (a.Vegan === 'FALSE' ? "https://img.icons8.com/color/512/non-vegetarian-food-symbol.png" :" ")} 
                   className='veg-nonveg'></img>
                       <p  style={{margin:"3px 0px",fontWeight:"bold",padding:"0px 20px"}}>{a.Name}</p>
-                      <p style={{margin:" 3px 0px",padding:"0px 20px"}}>hello this is the item u have ordered</p>
-                      <p style={{margin:"3px 0px",padding:"0px 20px"}}>{a.Price}</p>
+                      <p style={{margin:" 3px 0px",padding:"0px 20px",fontWeight:"normal", 
+                      
+                      // fontSize: card.Name.length < 30 ? "14px" : "12px"
+                       }}>hello this is the item u have ordered</p>
+                      <p style={{margin:"20px 0px",padding:"0px 20px"}}>{a.Price}  ₹</p>
                       {/* <div style={{border:"2px solid blue"  ,padding:"0px 5px 15px 20px", fontWeight:"bold"}}>{a.Name}</div>
                       <div style={{border:"2px solid yellow", padding:"0px 5px 15px 20px"}} >hello this is the item u have ordered</div>
                       <div style={{border:"2px solid pink", padding:"0px 5px 15px 20px"}} >{a.Price}</div> */}

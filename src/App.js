@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import ResturantLayout from './components/ResturantLayout';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import data from './WOTM_TheRedBox_Gajuwaka.json'
+import Layout from './components/ResturantLayoutComponents/Layout';
 
 
 function App() {
@@ -37,17 +38,15 @@ function App() {
   };
 
   return (
-    <div>
-      <ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} res={data} data={Menu}/>
-    </div>
-    // <BrowserRouter>
-    //     <Routes>
-    //       <Route path="/" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={data}/>}>
-    //         <Route path='resturant/:productId' element={<MenuCards />}></Route>
-    //         <Route path='resturant/:productId' element={<Cart />}></Route>
-    //       </Route>
-    //     </Routes>
-    // </BrowserRouter>
+    // <div>
+    //   <ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} res={data} data={Menu}/>
+    // </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={Menu} res={data}/>}>
+          </Route>
+        </Routes>
+    </BrowserRouter>
     
   );
 }

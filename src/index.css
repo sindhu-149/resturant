@@ -4,6 +4,7 @@ body{
   /* overflow: auto; */
   background-color: #ECECEC;
   /* background-color: #E5E0FF; */
+  /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Montserrat', sans-serif;
 }
 body::-webkit-scrollbar { 
@@ -367,7 +368,7 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 .menu-card{
-  
+  font-size: 15px;
   /* background-color: yellow; */
   
   
@@ -528,7 +529,7 @@ flex:20%;
   /* overflow: auto; */
   /* background-color: pink; */
 }
-/* .subcart::-webkit-scrollbar { 
+/* .cart::-webkit-scrollbar { 
   width: 0;
   height: 0;
 } */
@@ -587,6 +588,7 @@ flex:20%;
   flex-direction: row;
   overflow: auto;
   flex-shrink: 0;
+  margin-left:0px;
   /* width:70% */
 
   
@@ -627,10 +629,10 @@ flex:20%;
 
   border-radius:5px;
   padding:5px;
-
   font-size: 13px;
-
- 
+}
+.menu-card{
+  font-size: 12px;
 }
 .menu-list{
   width:270px;
@@ -645,7 +647,7 @@ flex:20%;
   margin-top: 15px;
   /* border: 10px solid deeppink; */
   border-radius:0px;
-
+  /* overflow: none; */
   /* padding: 0; */
   /* margin: 15px 0px; */
   /* background-color: aqua; */

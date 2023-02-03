@@ -9,7 +9,9 @@ import image from '../images/shopping-bag.png'
 
 const Card = (props) => {
     const {data, onAdd} = props;
-    const totalCards =data.length
+   
+
+
   return (
     <div  className='cardsList'>
         {data.map(card =>
@@ -24,7 +26,7 @@ const Card = (props) => {
           
           
            className='veg-nonveg'></img>
-          <div className=' item-name' style={{fontWeight:"bold",fontSize:"14px" ,height:"40px",padding:"3px 0px 10px 8px"}}>{card.Name}</div>
+          <div className=' item-name' style={{fontWeight:"bold", fontSize: card.Name.length < 30 ? "14px" : "12px"  ,height:"40px",padding:"3px 0px 10px 8px"}}>{card.Name}</div>
           <div  style={{ display:"flex"}}>
           <div className=' item-name' style={{fontWeight:"bold"}}>₹{card.Price} </div>
           <div
