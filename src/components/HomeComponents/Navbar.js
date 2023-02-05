@@ -29,38 +29,24 @@ const Navbar = () => {
   }
 
   return (
-      // <div>
-      //   {windowWidth < 680 ? 
-      //   <div>good morning</div>
-         
-      //     :
-      //     <div>sindhu</div>
-      //   }
-      // </div>
-   
-   
-
-
-    
-    <div style={{display:"flex", backgroundColor:"pink",justifyContent:"space-between"}}>
-    <img src={logo}></img>
+    <div  className='home-navbar'>
+    <img  className='logo' src={logo}></img>
     {windowWidth < 680 ? 
-        <div style={{border:"0px solid black", margin:"auto 0"}}>
-        <img onClick={handleClick} style={{width:"30px",position:"relative",paddingRight:"0px"}} src='https://cdn-icons-png.flaticon.com/512/4204/4204600.png'></img>
-        <div style={{position:"absolute",backgroundColor:"skyblue",right:"0",padding:"10px 30px 10px 8px",display:show}}>
-          <div style={{padding:"10px 0px"}}>Home</div>
-          <div style={{padding:"10px 0px"}}>Resturant</div>
-          <div style={{padding:"10px 0px"}}>Pricing</div>
-          <div style={{padding:"10px 0px"}}>Contact us</div>
+        <div className='navbar-text'>
+        <img onClick={handleClick} className='nav-side-btn' src='https://cdn-icons-png.flaticon.com/512/4204/4204600.png'></img>
+        <div className='nav-text-container' style={{display:show}}>
+          <div className='text'>Home</div>
+          <div className='text'>Resturant</div>
+          <div className='text'>Pricing</div>
+          <div className='text'>Contact us</div>
         </div>
-        </div>
-         
+        </div> 
           :
-          <div style={{border:"0px solid black",display:"flex",width:"600px",fontSize:"20px"}}>
-    <div style={{padding:"0px",margin:"auto"}}>Home</div>
-    <div style={{padding:"0px",margin:"auto"}}>Resturants</div>
-    <div style={{padding:"0px",margin:"auto"}}>Pricing</div>
-    <div style={{padding:"0px",margin:"auto"}}>Contact us</div>
+          <div className='text-container'>
+    <div className='nav-text'>Home</div>
+    <div className='nav-text'>Resturants</div>
+    <div className='nav-text'>Pricing</div>
+    <div className='nav-text'>Contact us</div>
     </div>
         }
    

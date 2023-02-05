@@ -1,19 +1,20 @@
 import './App.css';
-import React, {useState} from 'react';
-import ResturantLayout from './components/ResturantLayout';
+import React, {useState,useEffect} from 'react';
+import ResturantLayout from './components/ResturantLayoutComponents/ResturantLayout';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import data from './WOTM_TheRedBox_Gajuwaka.json'
-import Layout from './components/ResturantLayoutComponents/Layout';
+// import data from './restaurants/1.json'
 import Home from './components/HomeComponents/Home';
 
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const {Menu} =data
+  const {Menu} =data 
+
+  
   const onAdd = (product) => {
     console.log(product)
     const exist = cartItems.find((x) => x.id === product.id);
-    // alert(exist)
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
@@ -38,19 +39,29 @@ function App() {
     }
   };
 
+
+
+  
   return (
-    <div>
-      {/* <ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} res={data} data={Menu}/> */}
-      <Home />
-    </div>
-    // <BrowserRouter>
-    //     <Routes>
-    //       <Route path="/" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={Menu} res={data}/>}>
-    //       </Route>
-    //     </Routes>
-    // </BrowserRouter>
+  
+    <BrowserRouter>
+        <Routes>
+           <Route path='/' element={<Home />}> </Route>
+           <Route path="res" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={Menu} res={data}/>}>
+           </Route>
+        </Routes>
+    </BrowserRouter>
     
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+

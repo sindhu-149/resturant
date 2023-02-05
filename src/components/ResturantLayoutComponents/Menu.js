@@ -1,55 +1,64 @@
-import React, {useState} from 'react'
-
+import React, { useState } from "react";
 import Category from './Category'
+import MostPopular from "./MostPopular";
 
-
-const Menu = (props) => {
-  const {data, onAdd} = props
+import { HashLink as Link } from "react-router-hash-link";
+const SideBar = ( props) => {
+  const {data,onAdd} =props
   let result = data.map(a => a.Category)
-result = new Set(result) 
-result = Array.from(result)
-  const [appState, changeState] = useState({
-    activeObject : null,
-    objects:result
-  });
+     result = new Set(result) 
+     result = Array.from(result)
 
+const [appState, changeState] = useState({
+  activeObject : null,
+  objects:result
+});
 
-  function toggleActive(index){
-  if(appState.objects[index] === appState.activeObject){
-    changeState({...appState, activeObject: null});
-  }else{
-    changeState({...appState, activeObject: appState.objects[index]});
-  }
-}
-
-
-  function toggleStyle(index){
+const [showAll, setShowAll] = useState(false);
+const [display, setDisplay] = useState({});
+  const handleClick = (index) => {
     if(appState.objects[index] === appState.activeObject){
-      return "block";
+      changeState({...appState, activeObject: null});
+    }else{
+      changeState({...appState, activeObject: appState.objects[index]});
     }
-    else{
-      return "none";
-    }
+    setDisplay({
+      [index]: !display[index]
+    });
   }
-  return(
-  
-    <div className='menu' > 
-
-    <div className='head'>
-    
-           <p className='head-name'>Menu</p>
-
-         </div>
-         {appState.objects.map((elements,index) =>(
-          <div style={{left:"0",right:"0",marginLeft:"auto",marginRight:"auto",width:"97%" }}>
-
-        <Category className={toggleStyle(index)} key={index} onClick={ () => toggleActive(index)} onAdd={onAdd} data={data} name={elements} />
+  return (
+    <div  className="change" >
+          <div >
+            <h1>Category</h1>
+            <div className='itemsList' >
+              {appState.objects.map((val,index) =>(
+                <div >
+              <Link to={`#${val}`}><button className='item' onClick={() => handleClick(index)}>{val}</button></Link>
+             </div>   
+             ))}  
+            </div>
+          </div>
+         <div  className="total">
+         <div  >
+          <MostPopular data={data} onAdd={onAdd}/>
+          </div>
+          <div  className="some"> 
+          <div   className='head menu-head'>
+                  <p className='head-name'>Menu</p>
+          </div>
+              <div className="some2">
+                {appState.objects.map((t, index) => (
+                  <div >
+                  <Category  
+                  onClick={()=>handleClick(index)} 
+                  data={data} onAdd={onAdd} name= {t} text={(display[index] || showAll) ? "block" : "none"}/>
+                </div>
+              ))}
+       </div>
+            </div>
+          </div>
         </div>
-       ))}
+  );
+};
 
-         </div>
-  )
-}
-
-
-export default Menu
+export default SideBar;

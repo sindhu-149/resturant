@@ -1,52 +1,26 @@
-import React , {useState} from 'react'
-import MenuCards from '../MenuCards'
+import React from 'react'
+import MenuCards from './MenuCards';
+const Items = (props) => {
 
-
-
-
-const Category = (props) => {
-
-
-  const {data, onAdd,className,onClick,key} = props;
-
-  const [text,setText] = useState("none")
-  const [toggle, setToggle] = useState("false")
-
-  function handleClick() {
-    if (toggle === "false") {
-     setToggle("true")
-     setText("block")
-    }
-    else{
-      setToggle("false")
-      setText("none")
-    }
-  }
+  const {name,text,data,onAdd,onClick} = props;
   
-
-
   return (
-    
-    <div  className= "category" >
-     {/* <div  style={{ display:"flex", justifyContent:"space-between", padding:"8px",cursor:"pointer"}}   key={key} onClick={onClick}
-     value={props.name}
 
-     >
-      <p style={{border:"0px solid red",textAlign:"start", padding:"5px 10px", margin:"0px"}}> {props.name}</p>
-      <img  style={{border:"0px solid red",width:"30px",height:"30px",padding:"0px 10px"}} src='https://cdn-icons-png.flaticon.com/512/7996/7996254.png'></img>
+    <div className= "category" >
+
+      <div  id={name}  onClick={onClick}  className='sub-cat'> 
+        <p className='cat-name'> {name}</p>
+        <img  className='bag-img' src='https://cdn-icons-png.flaticon.com/512/7996/7996254.png'></img>
       </div>
-      <p  
-      className='menucards-list'
-      
-       style={{display: className}}>
+  
+      <p className='menucards-list'  style={{display: text}}  >
+      <MenuCards onAdd={onAdd} data={data} name = {name}/> 
+      </p>
 
-      <MenuCards onAdd={onAdd} data={data} name = {props.name}/>
-       
-       </p> */}
     </div>
-   
+
+    
   )
 }
 
-
-export default Category
+export default Items

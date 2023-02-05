@@ -3,12 +3,7 @@ import  Cart from './Cart'
 
 const SubCart = (props) => {
     const {cartItems, onAdd, onRemove} = props;
-
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
-    // const taxPrice = itemsPrice * 0.14;
-    // const shippingPrice = itemsPrice > 2000 ? 0 : 20;
-    // const totalPrice = itemsPrice + taxPrice + shippingPrice;
-
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [show, setShow] =useState("none")
     const [showTotal, setShowTotal] =useState("block")
@@ -38,41 +33,23 @@ const SubCart = (props) => {
 
   
     return (
-        <div  className='cart' style={{marginTop:"20px",
-        // position:"absolute"
-        }} >
+        <div  className='cart' >
           {windowWidth < 680 ? 
           <div style={{position:"relative"}}>
-          <div style={{ padding:"10px",border:"0px solid green",
-          // display:showTotal
-          display:"flex",
-          flexDirection:"row",
-          justifyContent:"space-between"
-          }}>
-             <div style={{border:"0px solid black"}}>
-             <p   style={{margin:"0px 0px 8px 0px" ,fontWeight:"bold"}}>Total Cost</p>
-             <p style={{margin:"0",fontSize:"22px",fontWeight:"bold",color:"#434242"}}>{cartItems.length === 0 ? 0 : itemsPrice}  ₹</p>
+          <div className='nope'>
+             <div >
+             <p className='cart-text'>Total Cost</p>
+             <p className='cart-text cart-price'>{cartItems.length === 0 ? 0 : itemsPrice}  ₹</p>
              </div>
-             <div style={{border:"0px solid black"}}>
-             <button  onClick={handleClick} style={{ fontSize:"20px",borderRadius:"30px",margin:"10px",fontWeight:"bolder",color:"white",backgroundColor:"#FFC93C",border:"none",padding:"10px 40px"}}>Go to cart</button>
+             <div >
+             <button  onClick={handleClick} className='cart-button'>Go to cart</button>
              </div>
             </div> 
-            <div style={{
-                
-                display:show,
-                backgroundColor:"white",
-                width:"100%",
-            //    paddingBottom:"500px",
-                margin:"0",
-                position: "absolute",
-                 bottom: "0px",
-                 height:"600px",
-                 overflow:"auto"
-                 
+            <div className='cart-bottom'  style={{ display:show,
+                             
                 }} >
             <img onClick={handleClick} src='https://cdn-icons-png.flaticon.com/512/507/507257.png' style={{width:"30px",padding:"15px 10px"}}></img>
             <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />
-            {/* <Cart /> */}
             </div>
           </div>
            
