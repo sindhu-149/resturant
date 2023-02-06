@@ -6,7 +6,7 @@ const Items = (props) => {
   
   return (
 
-    <div className= "category" >
+    <div className= "category"  >
 
       <div  id={name}  onClick={onClick}  className='sub-cat'> 
         <p className='cat-name'> {name}</p>
