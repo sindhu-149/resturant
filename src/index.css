@@ -82,8 +82,9 @@ font-size: 20px;
 }
 .btn{
   background-color: #F2CD6C;
+  box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.5);
   border-radius: 30px;
-  border:none;
+  border:1px solid black;
   font-weight: bold;
   padding: 10px 20px;
   margin:0px;
