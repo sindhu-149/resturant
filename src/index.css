@@ -49,7 +49,7 @@ font-size: 20px;
 .nav-text{
   margin: auto;
   color:#203239;
-  font-size: 22px;
+  font-size: 2px;
   font-weight: bold;
 }
 /* content */
@@ -108,7 +108,7 @@ margin-top: -170px;
 width: 450px;
 }
 .box1-img{
-  background-color: #AC7088;
+  background-color: #F2CD5C;
   border-radius: 100%;
   padding: 10px 10px 50px 10px;
   margin: 40px auto;
