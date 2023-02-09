@@ -33,4 +33,4 @@ const Card = (props) => {
 
 
 
-export { Card }
+export   default Card 

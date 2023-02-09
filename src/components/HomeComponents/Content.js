@@ -29,7 +29,7 @@ const Content = () => {
 
                 <div className='box1'>
                     <p className='box1-text'>Scan & Savor </p>
-                    <p className='box1-text2'>Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                    <p className='box1-text2'>Scan the QR code to know what’s on the menu?</p>
                     <button className='btn'>Call to action</button>
                 </div>
 
@@ -75,7 +75,7 @@ const Content = () => {
                     <div
                      className='box3'>
                         <p className='box3-text'>Contactless Menu</p>
-                        <p className='box1-text2'>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                        <p className='box1-text2'>QR code based menus eliminate the need for customers to physically handle menus.</p>
                         <button className='btn'>Call to action</button>
                     </div>
 
@@ -93,7 +93,7 @@ const Content = () => {
 
                 <div className='box4-text'>
                     <p className='box3-text'>convenient for customers</p>
-                    <p className='box1-text2'>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                    <p className='box1-text2'>Customers can easily access the menu with their smartphones by scanning the QR code.</p>
                     <button className='btn'>Call to action</button>
                 </div>
 
@@ -111,7 +111,7 @@ const Content = () => {
 
                 <div className='box4-text'>
                     <p className='box3-text'>convenient for customers</p>
-                    <p className='box1-text2'>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                    <p className='box1-text2'>Digital menus can be easily updated and customized, allowing restaurants to quickly make changes.</p>
                     <button className='btn'>Call to action</button>
                 </div>
 
