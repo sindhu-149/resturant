@@ -5,7 +5,7 @@ const Fake = (props) => {
     
   return (
     <div className='navbar' style={{ backgroundImage: `url(${data?.Background})` }}
-    >Fake 
+    >
    {/* {data?.Menu?.map((menuItem, index) => (
         <li key={index}>
         {`${menuItem.Name} ${menuItem.Price}`}

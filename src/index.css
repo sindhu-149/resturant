@@ -447,11 +447,38 @@ font-size: 18px;
   overflow-x: scroll;
  
 }
-.list::-webkit-scrollbar { 
+/* .list::-webkit-scrollbar { 
   width: 0;
   height: 0;
+} */
+/* width */
+.list::-webkit-scrollbar {
+  width: 20px;
+  height: 15px;
+
 }
 
+/* Track */
+.list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+.list::-webkit-scrollbar{
+
+}
+/* Handle */
+.list::-webkit-scrollbar-thumb {
+  /* border: 1px solid black; */
+
+  background: rgb(244, 179, 76);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.list::-webkit-scrollbar-thumb:hover {
+  background: #FFC93C;
+}
 
 .cardsList{
   display: flex;

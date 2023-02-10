@@ -5,15 +5,7 @@ import Menu from './Menu'
 const Container = (props) => {
   const {data, cartItems, onAdd, onRemove } = props;
   return (
-    <div className='container' >
-
-
-
-  {/* {data?.map((menuItem, index) => (
-        <li key={index}>
-        {`${menuItem.Name} ${menuItem.Price}`}
-        </li>
-      ))} */}
+    <div className='container'>
 
 
     <Menu  data={data} onAdd={onAdd}/>
