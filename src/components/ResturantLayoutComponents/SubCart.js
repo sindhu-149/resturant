@@ -35,7 +35,7 @@ const SubCart = (props) => {
     return (
         <div  className='cart' >
           {windowWidth < 680 ? 
-          <div style={{position:"relative"}}>
+          <div  style={{position:"relative"}}>
           <div className='nope'>
              <div >
              <p className='cart-text'>Total Cost</p>

@@ -19,7 +19,7 @@ const MenuCards = (props) => {
                   className='veg-nonveg'></img>
                       <p style={{fontSize: a.Name.length < 30 ? "17px" : "15px"}} className='menu-card-name'>{a.Name}</p>
                       <p className='menu-card-des menu-card-name'>hello this is the item u have ordered</p>
-                      <p className='menu-price'>{a.Price}  ₹</p></div>
+                      <p className='menu-price'>₹ {a.Price}</p></div>
 
                 <div  className='menu-card menu-image' >
                     {a.Image &&

@@ -20,9 +20,9 @@ const Cart = (props) => {
                   className='veg-nonveg'></img>
                       <div className='sub-cart-menu-text cart-text'>{item.Name}</div>
                       <div className='sub-cart-menu-text'>hello this is the item u have ordered</div>
-                      <div className='sub-cart-menu-text'>{item.Price}</div>
+                      <div className='sub-cart-menu-text number'> ₹ {item.Price}</div>
                 </div>
-                <div  className='menu-card total-price'>
+                <div  className='menu-card total-price number'>
                   {item.qty * item.Price.toFixed(2)}
                 </div>
                 <div  className='menu-card menu-image' 
@@ -44,7 +44,7 @@ const Cart = (props) => {
           <div className='payment'>
              <div  className='payment-text'>
             <div >Total Price</div>
-             <div >{itemsPrice.toFixed(2)}</div>
+             <div className='number' >{itemsPrice.toFixed(2)}</div>
            </div>
             <div >
               <button  onClick={() => alert(' Checkout!')}

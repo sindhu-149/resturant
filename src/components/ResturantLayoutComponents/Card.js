@@ -18,7 +18,7 @@ const Card = (props) => {
            className='veg-nonveg'></img>
           <div className=' item-name' style={{fontSize: card?.Name.length < 30 ? "14px" : "12px"}}>{card?.Name}</div>
           <div className='card-bottom'>
-          <div className=' item-name card-price' >₹{card?.Price} </div>
+          <div className=' item-name card-price' >₹ {card?.Price} </div>
           <div className='card-image' onClick={ () => onAdd(card) }>
             <img className='card-image-bag' src={image}></img>
           </div>
