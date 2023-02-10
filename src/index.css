@@ -464,9 +464,7 @@ font-size: 18px;
   /* border: 1px solid black; */
   border-radius: 10px;
 }
-.list::-webkit-scrollbar{
 
-}
 /* Handle */
 .list::-webkit-scrollbar-thumb {
   /* border: 1px solid black; */
