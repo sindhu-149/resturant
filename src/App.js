@@ -2,18 +2,12 @@ import './App.css';
 import React, {useState,useEffect} from 'react';
 import ResturantLayout from './components/ResturantLayoutComponents/ResturantLayout';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-
-// import {path} from Dummy
-
-import data from './WOTM_TheRedBox_Gajuwaka.json'
-// import data from './restaurants/1.json'
 import Home from './components/HomeComponents/Home';
-import Dummy from './components/ResturantLayoutComponents/Dummy';
+
 
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const {Menu} =data 
 
   
   const onAdd = (product) => {
@@ -43,16 +37,13 @@ function App() {
     }
   };
 
-
-
   
   return (
   
     <BrowserRouter>
         <Routes>
            <Route path='/' element={<Home />}> </Route>
-           <Route path='/resu/:id' element={<Dummy res={data} />} />
-           <Route path="/restaurant/:id" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} data={Menu} res={data}/>}>
+           <Route path="/restaurant/:id" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}>
            </Route>
         </Routes>
     </BrowserRouter>

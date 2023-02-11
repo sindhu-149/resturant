@@ -28,15 +28,8 @@ const [display, setDisplay] = useState({});
   return (
     <div  className="change" > 
           <div > 
-            <h1>Category</h1>
+            <h1 className="cat-head">Category</h1>
             <div className='itemsList' >
-              {/* {appState.objects.map((val,index) =>(
-                <div >
-              <Link to={`#${val}`}>
-              <button className='item' onClick={() => handleClick(index)}>{val}</button>
-              </Link>
-             </div>   
-             ))}   */}
              {result?.map((val,index) =>(
                 <div >
               <Link to={`#${val}`}>

@@ -1,17 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 const Cart = (props) => { 
 
-    const {cartItems, onAdd, onRemove} = props;
+    const {cartItems, onAdd, onRemove,onClick} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    useEffect(() => {
+      function handleResize() {
+        setWindowWidth(window.innerWidth);
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
     
   return (
     <div className='sub-cart'>
      <div className='sub-cart-conatiner'>
+     {windowWidth < 680 && <img onClick={onClick} src='https://cdn-icons-png.flaticon.com/512/507/507257.png' style={{width:"30px",margin:"0px 0px 50px 0px "}}></img>}
      <img  className='sub-cart-image' src='https://cdn-icons-png.flaticon.com/512/2662/2662503.png' ></img>
-     <h1 className='sub-cart-text'>Cart</h1>
+     <h1 className='sub-cart-text' >Cart </h1>
     </div>  
-    <div className='empty'>{cartItems.length === 0 && <div>Cart is empty</div>}</div>
+    {/* <div className='empty'>{cartItems.length === 0 && <div>Cart is empty</div>}</div> */}
     <div className='cart-cards'>
     {cartItems.map((item) => (
          <div  key={item.id} className='cart-list'> 

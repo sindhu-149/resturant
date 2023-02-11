@@ -2,8 +2,8 @@
 	"Name": "Arabian Spices",
 	"Address": "Door no 6-1-7, JHAALA COMPLEX, LBS Nagar, Old Gajuwaka",
 	"Tags": ["Chinese", "Momos", "Thai", "Asian"],
-	"Logo":"http://www.theredbox.in/assets/images/logo.png",
-	"Background":"http://theredbox.in/assets/images/hdr-bnr-04.jpg",
+	"Logo":"https://www.julieseatsandtreats.com/wp-content/uploads/2020/06/Rainbow-Ice-Cream-14-of-16.jpg",
+	"Background":"https://5.imimg.com/data5/YS/TA/MY-13049124/restaurant-wallpaper-design-1000x1000.jpg",
 	"Menu":  [
   { "id":"1",
     "Category": "Soups",
