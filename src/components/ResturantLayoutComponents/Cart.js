@@ -19,7 +19,7 @@ const Cart = (props) => {
                   <img src= {item.Vegan === 'TRUE' ? "https://img.icons8.com/color/512/vegetarian-food-symbol.png" : (item.Vegan === 'FALSE' ? "https://img.icons8.com/color/512/non-vegetarian-food-symbol.png" :" ")} 
                   className='veg-nonveg'></img>
                       <div className='sub-cart-menu-text cart-text'>{item.Name}</div>
-                      <div className='sub-cart-menu-text'>hello this is the item u have ordered</div>
+                      <div className='sub-cart-menu-text'>{item.Description}</div>
                       <div className='sub-cart-menu-text number'> ₹ {item.Price}</div>
                 </div>
                 <div  className='menu-card total-price number'>

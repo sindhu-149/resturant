@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar'
 import Container from './Container'
-import Fake from './Fake'
+import Navbar from './Navbar'
 import {useParams }  from 'react-router';
 
 import axios from 'axios'
@@ -24,10 +23,7 @@ useEffect(() => {
 
   return (
         <div className='layout'>
-      
-        {/* <Navbar  res={ text?.Name}/> */}
-        <Fake data={text}/>
-        
+        <Navbar data={text}/>
         <Container onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}  data={text?.Menu} /> 
         </div>
   )

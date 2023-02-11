@@ -1,5 +1,5 @@
 import React from 'react'
-
+import map from '../../images/map.png'
 
 const ResturantName = (props) => {
 
@@ -9,8 +9,8 @@ const ResturantName = (props) => {
     <div>
     <div className='title-bg' >
      <h1 className='title-name'>{data?.Name}</h1>
-     <img className='map-image' src="https://cdn-icons-png.flaticon.com/512/854/854878.png"></img>
-     <h5 style={{ display:"inline"}}>{data?.Address}</h5>
+     <img className='map-image' src={map}></img>
+     <span className='address'>{data?.Address}</span>
      <div  className='title-bg-type'>
      {data?.Tags?.map(type =>(
         <span  className='title-bg-type-test'>{type}</span>
@@ -18,7 +18,7 @@ const ResturantName = (props) => {
    </div>   
     </div>
     <div className='resturant-name' >
-      <img className='resturant-name-image'  src="https://www.julieseatsandtreats.com/wp-content/uploads/2020/06/Rainbow-Ice-Cream-14-of-16.jpg"></img>
+      <img className='resturant-name-image'  src={data.Logo}></img>
     </div>  
     </div>
   )
