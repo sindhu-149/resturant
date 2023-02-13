@@ -8,7 +8,7 @@ const Container = (props) => {
     <div className='container'>
 
 
-    <Menu  data={data} onAdd={onAdd}/>
+    <Menu  onRemove={onRemove} data={data} onAdd={onAdd} cartItems={cartItems}/>
     <SubCart  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems}/>
     </div>
   )

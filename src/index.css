@@ -694,7 +694,7 @@ padding: 10px 40px;
   margin:0;
   position: absolute;
   bottom: 0px;
-  height: 800px;
+  height: 400px;
   overflow: auto;
 }
 .back{
@@ -973,6 +973,7 @@ padding-right: 90px;
 
 }
 .cart-cards{
+  background-color: white;
   height: 600px;
   overflow: scroll;
   position: fixed;

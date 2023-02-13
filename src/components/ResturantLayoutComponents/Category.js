@@ -2,7 +2,7 @@ import React from 'react'
 import MenuCards from './MenuCards';
 const Items = (props) => {
 
-  const {name,text,data,onAdd,onClick} = props;
+  const {name,text,data,onAdd,onClick,onRemove,cartItems} = props;
   
   return (
 
@@ -14,7 +14,7 @@ const Items = (props) => {
       </div>
   
       <p className='menucards-list'  style={{display: text}}  >
-      <MenuCards onAdd={onAdd} data={data} name = {name}/> 
+      <MenuCards cartItems={cartItems} onRemove={onRemove} onAdd={onAdd} data={data} name = {name}/> 
       </p>
 
     </div>

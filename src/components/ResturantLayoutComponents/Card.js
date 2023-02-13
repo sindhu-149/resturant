@@ -20,7 +20,8 @@ const Card = (props) => {
           <div className='card-bottom'>
           <div className=' card-price' >₹ {card?.Price} </div>
           <div className='card-image' onClick={ () => onAdd(card) }>
-            <img className='card-image-bag' src={image}></img>
+           <img className='card-image-bag' src={image}></img>
+           
           </div>
           </div>
            </div>

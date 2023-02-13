@@ -3,14 +3,15 @@ import images from '../../images/shopping-bag.png'
 
 const MenuCards = (props) => {
 
-  const {data, onAdd} = props;
+  const {data, onAdd, onRemove,cartItems} = props;
+
+
 
   return (
 
 <div className='menu-items-container'>
        {data.map(a =>(
         <div>
-
          {props.name === a.Category &&
           <div  key={a.id} className='menu-list'>
                 <div  className='menu-card'>     
@@ -27,8 +28,11 @@ const MenuCards = (props) => {
                     }
                 </div>
                 <div className='menu-card' style={{ position:"relative"}}  onClick={ () =>onAdd(a) } >
-                 <img className='menucard-image' style={{ backgroundColor:"#FFC93C" }}  src={images}></img>
-               </div>
+                 <img className='menucard-image' style={{ backgroundColor:"#FFC93C" }} src={images} ></img>
+                </div>
+                <button onClick={()=>onRemove(a)}> - </button>
+               
+                <button onClick={() =>onAdd(a)}> + </button>
             </div>           
           } 
         </div>

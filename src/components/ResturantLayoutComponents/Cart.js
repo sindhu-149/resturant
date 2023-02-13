@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const Cart = (props) => { 
 
     const {cartItems, onAdd, onRemove,onClick} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const { id } = useParams();
+
     useEffect(() => {
       function handleResize() {
         setWindowWidth(window.innerWidth);
@@ -17,14 +21,19 @@ const Cart = (props) => {
   return (
     <div className='sub-cart'>
      <div className='sub-cart-conatiner'>
-     {windowWidth < 680 && <img onClick={onClick} src='https://cdn-icons-png.flaticon.com/512/507/507257.png' style={{width:"30px",margin:"0px 0px 50px 0px "}}></img>}
+     {windowWidth < 680 && 
+      <Link to={`/restaurant/${id}`}>
+                  <img onClick={onClick} src='https://cdn-icons-png.flaticon.com/512/507/507257.png' style={{width:"30px",margin:"0px 0px 50px 0px "}}></img>
+             </Link>
+
+     }
      <img  className='sub-cart-image' src='https://cdn-icons-png.flaticon.com/512/2662/2662503.png' ></img>
      <h1 className='sub-cart-text' >Cart </h1>
     </div>  
     {/* <div className='empty'>{cartItems.length === 0 && <div>Cart is empty</div>}</div> */}
     <div className='cart-cards'>
     {cartItems.map((item) => (
-         <div  key={item.id} className='cart-list'> 
+         <div  key={item.id} className='cart-list'  > 
                 <div className='menu-card'>
                   <img src= {item.Vegan === 'TRUE' ? "https://img.icons8.com/color/512/vegetarian-food-symbol.png" : (item.Vegan === 'FALSE' ? "https://img.icons8.com/color/512/non-vegetarian-food-symbol.png" :" ")} 
                   className='veg-nonveg'></img>

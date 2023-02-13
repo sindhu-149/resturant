@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useParams } from 'react';
 import  Cart from './Cart'
+import { Link } from 'react-router-dom';
 
 const SubCart = (props) => {
     const {cartItems, onAdd, onRemove} = props;
@@ -7,7 +8,10 @@ const SubCart = (props) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [show, setShow] =useState("none")
     const [showTotal, setShowTotal] =useState("block")
+    // const res = window.location.href
+    // const {id} = useParams()
    
+    // const { id } = useParams();
 
     function handleClick(){
         if (show === "none") {
@@ -43,11 +47,12 @@ const SubCart = (props) => {
              <p className='cart-text cart-price'>{cartItems.length === 0 ? 0 : itemsPrice}  ₹</p>
              </div>
              <div >
+             <Link to='cart'>
              <button  onClick={handleClick} className='cart-button'>Go to cart</button>
+             </Link>
              </div>
             </div> 
             <div className='cart-bottom'  style={{ display:show}} >
-            {/* <img onClick={handleClick} src='https://cdn-icons-png.flaticon.com/512/507/507257.png' style={{width:"30px",padding:"15px 10px"}}></img> */}
             <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} onClick={handleClick}/>
             </div>
           </div>

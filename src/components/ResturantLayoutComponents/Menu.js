@@ -3,7 +3,7 @@ import Category from './Category'
 import MostPopular from "./MostPopular";
 import { HashLink as Link } from "react-router-hash-link";
 const SideBar = ( props) => {
-  const {data,onAdd} =props
+  const {data,onAdd,onRemove,cartItems} =props
   let result = data?.map(a => a?.Category)
      result = new Set(result) 
      result = Array?.from(result)
@@ -60,6 +60,8 @@ const [display, setDisplay] = useState({});
               {result?.map((t, index) => (
                   <div >
                   <Category  
+                  onRemove={onRemove}
+                  cartItems={cartItems}
                   onClick={()=>handleClick(index)} 
                   data={data} onAdd={onAdd} name= {t} text={(display[index] || showAll) ? "block" : "none"}/>
                 </div>
