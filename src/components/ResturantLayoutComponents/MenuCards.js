@@ -51,7 +51,7 @@ const MenuCards = (props) => {
             -{' '}
           </button>
         </div>
-        <span>{item.qty}</span>
+        <span className='number'>{item.qty}</span>
         <div>
           <button className='quantity-btn' onClick={() => onAdd(item)}>
             {' '}

@@ -538,6 +538,9 @@ font-size: 18px;
   margin-top: -10px;
  
 }
+.card-image-bag:hover{
+  background-color: rgb(240, 85, 24);
+}
 
 
 /* category */ 

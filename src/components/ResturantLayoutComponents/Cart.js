@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Cart = (props) => { 
 
     const {cartItems, onAdd, onRemove,onClick} = props;
-    const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
+    const totalItems = cartItems.reduce((a, c) => a + c.qty , 0);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const { id } = useParams();
 
@@ -62,16 +62,16 @@ const Cart = (props) => {
         {cartItems.length !== 0 && (
           <div className='payment'>
              <div  className='payment-text'>
-            <div >Total Price</div>
-             <div className='number' >{itemsPrice.toFixed(2)}</div>
+            <div style={{fontWeight:"bold"}}>Total Items</div>
+             <div className='number' style={{fontWeight:"bold"}} >{totalItems}</div>
            </div>
-            <div >
+            {/* <div >
               <button  onClick={() => alert(' Checkout!')}
               className='payment-btn'
               >
                 Proceed to pay
               </button>
-            </div>
+            </div> */}
           </div>
         )}    
 </div>
