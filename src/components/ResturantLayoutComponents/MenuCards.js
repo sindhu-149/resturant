@@ -2,11 +2,8 @@ import React, { useState, useEffect }  from 'react'
 import images from '../../images/shopping-bag.png'
 
 const MenuCards = (props) => {
-
+  
   const {data, onAdd, onRemove,cartItems} = props;
-
-
-
   return (
 
 <div className='menu-items-container'>
@@ -27,12 +24,52 @@ const MenuCards = (props) => {
                       <img  className=' menu-card-image '  src={a.Image} alt="dish image"></img>
                     }
                 </div>
-                <div className='menu-card' style={{ position:"relative"}}  onClick={ () =>onAdd(a) } >
+                
+                {/* <div className='menu-card' style={{ position:"relative"}}  onClick={ () =>onAdd(a) } >
                  <img className='menucard-image' style={{ backgroundColor:"#FFC93C" }} src={images} ></img>
                 </div>
-                <button onClick={()=>onRemove(a)}> - </button>
-               
-                <button onClick={() =>onAdd(a)}> + </button>
+                {cartItems.filter((item) => item.id === a.id).map((item) => (
+  <div key={item.id}>
+    <div>
+      <button className='quantity-btn' onClick={() => onRemove(item)} > - </button>
+    </div>  
+    <span>{item.qty}</span> 
+    <div>
+      <button className='quantity-btn' onClick={() => onAdd(item)} > + </button>
+    </div>
+  </div>
+))} */}
+
+{cartItems.find((item) => item.id === a.id && item.qty > 0) ? (
+  cartItems
+    .filter((item) => item.id === a.id)
+    .map((item) => (
+      <div key={item.id} style={{backgroundColor:'#FFC93C' ,margin:"auto",marginRight:"-17px",borderRadius:"5px",padding:"3px 7px"}}>
+        <div >
+          <button className='quantity-btn' onClick={() => onRemove(item)}>
+            {' '}
+            -{' '}
+          </button>
+        </div>
+        <span>{item.qty}</span>
+        <div>
+          <button className='quantity-btn' onClick={() => onAdd(item)}>
+            {' '}
+            +{' '}
+          </button>
+        </div>
+      </div>
+    ))
+) : (
+  <div className='menu-card' style={{ position: 'relative' }} onClick={() => onAdd(a)}>
+    <img className='menucard-image' style={{ backgroundColor: '#FFC93C' }} src={images} />
+  </div>
+)}
+
+
+
+
+
             </div>           
           } 
         </div>

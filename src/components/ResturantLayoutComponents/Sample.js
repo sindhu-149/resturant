@@ -8,10 +8,6 @@ const Sample = (props) => {
       const { id } = useParams();
   return (
     <div>
-            {/* <Link to={`/restaurant/${id}`}>
-             <p>back</p>
-             </Link> */}
-    {/* <div>Sample</div> */}
     <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />
     </div>
   )

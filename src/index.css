@@ -974,7 +974,8 @@ padding-right: 90px;
 }
 .cart-cards{
   background-color: white;
-  height: 600px;
+  /* height: 600px; */
+  padding: 0px 18px;
   overflow: scroll;
   position: fixed;
 }
