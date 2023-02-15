@@ -700,6 +700,7 @@ font-size: 18px;
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
   background-color: white;
   margin-top: 20px;
+
 }
 
 .nope{
@@ -1115,6 +1116,7 @@ padding-right: 90px;
   left: 0;
   right: 0;
   font-size: 20px;
-  padding: 0px 20px 3px;
+  padding: 0px 20px;
+  margin-bottom: 10px;
 }
 }
