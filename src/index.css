@@ -862,7 +862,19 @@ padding: 10px 40px;
   border: none;
 }
 
-
+.cart-page{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  left:0;
+  right: 0;
+  font-size: 20px;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0px 20px;
+  margin: 0px;
+}
 
 
 @media screen and (max-width: 680px) {
@@ -1077,7 +1089,7 @@ padding-right: 90px;
 .cart-cards{
   background-color: white;
   padding: 0px 18px;
-  height:600px;
+  height:80%;
   overflow-y: auto;
   position: fixed;
   left:0;
@@ -1110,13 +1122,4 @@ padding-right: 90px;
   font-size: 18px;
 }
 
-.payment{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 20px;
-  padding: 0px 20px;
-  margin-bottom: 10px;
-}
 }

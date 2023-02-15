@@ -17,8 +17,8 @@ const Cart = (props) => {
     }, []);
     
   return (
-    <div className='sub-cart' >
-        <div className='sub-cart-conatiner'>
+    <div className='sub-cart'>
+        <div className='sub-cart-conatiner' >
             {windowWidth < 680 && 
                 <Link to={`/restaurant/${id}`}>
                   <img onClick={onClick} src='https://cdn-icons-png.flaticon.com/512/507/507257.png' style={{width:"30px",margin:"0px 0px 50px 0px "}}></img>
@@ -27,7 +27,7 @@ const Cart = (props) => {
             <img  className='sub-cart-image' src='https://cdn-icons-png.flaticon.com/512/2662/2662503.png' ></img>
             <h1 className='sub-cart-text' >Cart</h1>
         </div>  
-        <div className='cart-cards' >
+        <div className='cart-cards'>
             {cartItems.map((item) => (
                 <div  key={item.id} className='cart-list'> 
                     <div className='menu-card'>
@@ -52,7 +52,7 @@ const Cart = (props) => {
                       </div> 
                 </div> 
             ))} 
-            {cartItems.length !== 0 && (
+            {(cartItems.length !== 0 && windowWidth> 680) && (
                 <div className='payment'>
                     <div className='payment-text'>
                         <div style={{fontWeight:"bold"}}>Total Items</div>

@@ -3,7 +3,7 @@ import React, {useState,useEffect} from 'react';
 import ResturantLayout from './components/ResturantLayoutComponents/ResturantLayout';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './components/HomeComponents/Home';
-import Sample from './components/ResturantLayoutComponents/Sample';
+import CartPage from './components/ResturantLayoutComponents/CartPage';
 
 function App() {
 
@@ -43,7 +43,7 @@ function App() {
         <Routes>
            <Route path='/' element={<Home />}> </Route>
            <Route path="/restaurant/:id" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}></Route>
-           <Route path="/restaurant/:id/cart" element={<Sample onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}></Route>       
+           <Route path="/restaurant/:id/cart" element={<CartPage onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}></Route>       
         </Routes>
     </BrowserRouter>
  
