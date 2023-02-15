@@ -56,7 +56,7 @@ const Cart = (props) => {
               </div>
              
             </div>
-               </div>
+               </div> 
          </div> 
         ))} 
         {cartItems.length !== 0 && (

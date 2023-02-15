@@ -5,11 +5,9 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './components/HomeComponents/Home';
 import Sample from './components/ResturantLayoutComponents/Sample';
 
-
-
 function App() {
-  const [cartItems, setCartItems] = useState([]);
 
+  const [cartItems, setCartItems] = useState([]);
   
   const onAdd = (product) => {
     console.log(product)
@@ -44,7 +42,7 @@ function App() {
     <BrowserRouter>
         <Routes>
            <Route path='/' element={<Home />}> </Route>
-           <Route path="/restaurant/:id" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}>    </Route>
+           <Route path="/restaurant/:id" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}></Route>
            <Route path="/restaurant/:id/cart" element={<Sample onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}></Route>
        
         </Routes>

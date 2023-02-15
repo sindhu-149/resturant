@@ -44,16 +44,20 @@ const MenuCards = (props) => {
   cartItems
     .filter((item) => item.id === a.id)
     .map((item) => (
-      <div key={item.id} style={{backgroundColor:'#FFC93C' ,margin:"auto",marginRight:"-17px",borderRadius:"5px",padding:"3px 7px"}}>
+      <div key={item.id} style={{backgroundColor:'#FFC93C' ,margin:"auto "
+      ,marginRight:"-22px"
+      ,borderRadius:"5px"
+      // ,padding:"3px 7px"
+      }}>
         <div >
-          <button className='quantity-btn' onClick={() => onRemove(item)}>
+          <button className='quantity-btn2' onClick={() => onRemove(item)}>
             {' '}
             -{' '}
           </button>
         </div>
         <span className='number'>{item.qty}</span>
         <div>
-          <button className='quantity-btn' onClick={() => onAdd(item)}>
+          <button className='quantity-btn2' onClick={() => onAdd(item)}>
             {' '}
             +{' '}
           </button>

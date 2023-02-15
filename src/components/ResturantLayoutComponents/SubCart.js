@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const SubCart = (props) => {
     const {cartItems, onAdd, onRemove} = props;
-    const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.Price, 0);
+    const totalItems = cartItems.reduce((a, c) => a + c.qty , 0);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [show, setShow] =useState("none")
     const [showTotal, setShowTotal] =useState("block")
@@ -43,8 +43,8 @@ const SubCart = (props) => {
           <div>
           <div className='nope'>
              <div >
-             <p className='cart-text'>Total Cost</p>
-             <p className='cart-text cart-price'>{cartItems.length === 0 ? 0 : itemsPrice}  ₹</p>
+             <p className='cart-text'>Total Items</p>
+             <p className='cart-text cart-price'>{cartItems.length === 0 ? 0 : totalItems} </p>
              </div>
              <div >
              <Link to='cart'>
