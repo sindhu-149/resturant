@@ -1092,7 +1092,7 @@ padding-right: 90px;
   padding: 0px 18px;
   overflow-y: auto;
   height: 700px;
-  position: fixed;
+  /* position: fixed; */
   left:0;
   right: 0;
 }
