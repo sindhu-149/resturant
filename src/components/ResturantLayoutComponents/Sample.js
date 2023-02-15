@@ -6,6 +6,7 @@ const Sample = (props) => {
   return (
      <div >
         <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />
+        <h2>hekoooo</h2>
      </div>
   )
 }
