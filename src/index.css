@@ -634,7 +634,7 @@ font-size: 18px;
 
 .menu-list{
   display: grid;
-   background-color: #ECECEC;
+  background-color: #ECECEC;
   grid-template-columns: auto auto auto;
   width:430px;
   height: 200px;
@@ -1114,6 +1114,6 @@ padding-right: 90px;
   left: 0;
   right: 0;
   font-size: 20px;
-  padding: 0px 20px 10px;
+  padding: 0px 20px 3px;
 }
 }

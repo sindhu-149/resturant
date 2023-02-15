@@ -31,14 +31,14 @@ const SubCart = (props) => {
         <div  className='cart' >      
             {windowWidth < 680 
             ?  
-                <div>
-                    <div className='nope'>
+                <div >
+                    <div className='nope' >
                         <div >
                             <p className='cart-text'>Total Items</p>
                             <p className='cart-text cart-price'>{cartItems.length === 0 ? 0 : totalItems} </p>
                         </div>
                         <div>
-                        <Link to={`/restaurant/${id}/cart`}>
+                            <Link to={`/restaurant/${id}/cart`}>
                                 <button  onClick={handleClick} className='cart-button'>Go to cart</button>
                             </Link>
                         </div>

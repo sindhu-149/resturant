@@ -4,7 +4,7 @@ import Cart from './Cart';
 const Sample = (props) => {
     const {onAdd,onRemove,cartItems}=props;
   return (
-     <div>
+     <div >
         <Cart onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />
      </div>
   )

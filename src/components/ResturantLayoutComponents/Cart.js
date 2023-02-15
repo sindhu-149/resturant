@@ -17,7 +17,7 @@ const Cart = (props) => {
     }, []);
     
   return (
-    <div className='sub-cart'>
+    <div className='sub-cart' >
         <div className='sub-cart-conatiner'>
             {windowWidth < 680 && 
                 <Link to={`/restaurant/${id}`}>
@@ -27,9 +27,9 @@ const Cart = (props) => {
             <img  className='sub-cart-image' src='https://cdn-icons-png.flaticon.com/512/2662/2662503.png' ></img>
             <h1 className='sub-cart-text' >Cart</h1>
         </div>  
-        <div className='cart-cards'>
+        <div className='cart-cards' >
             {cartItems.map((item) => (
-                <div  key={item.id} className='cart-list'  > 
+                <div  key={item.id} className='cart-list'> 
                     <div className='menu-card'>
                           <img src= {item.Vegan === 'TRUE' ? "https://img.icons8.com/color/512/vegetarian-food-symbol.png" : (item.Vegan === 'FALSE' ? "https://img.icons8.com/color/512/non-vegetarian-food-symbol.png" :" ")} className='veg-nonveg'></img>
                           <div className='sub-cart-menu-text cart-text'>{item.Name}</div>
