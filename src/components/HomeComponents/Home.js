@@ -7,10 +7,10 @@ import Footer from './Footer'
 const Home = () => {
   return (
     <div  className='home'>
-  <Navbar />
-  <Content />
-  <Footer />
-  </div>
+        <Navbar />
+        <Content />
+        <Footer />
+    </div>
   )
 }
 

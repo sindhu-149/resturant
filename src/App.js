@@ -43,8 +43,7 @@ function App() {
         <Routes>
            <Route path='/' element={<Home />}> </Route>
            <Route path="/restaurant/:id" element={<ResturantLayout  onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}></Route>
-           <Route path="/restaurant/:id/cart" element={<Sample onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}></Route>
-       
+           <Route path="/restaurant/:id/cart" element={<Sample onRemove={onRemove} onAdd={onAdd} cartItems={cartItems} />}></Route>       
         </Routes>
     </BrowserRouter>
  
