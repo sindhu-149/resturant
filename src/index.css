@@ -757,7 +757,7 @@ padding: 10px 40px;
 }
 
 .sub-cart-conatiner{
-   border-radius:20px 20px 0px 0px ;
+  border-radius:20px 20px 0px 0px ;
   background-color: white;
   padding:18px 0px 0px 18px ;  
 }
@@ -779,7 +779,7 @@ padding: 10px 40px;
 .cart-cards{   
     padding:18px;
     background-color: white;
-    height: 700px;  
+    height: 900px;  
     overflow-y: auto;         
 }
 .cart-cards::-webkit-scrollbar {
@@ -1108,4 +1108,12 @@ padding-right: 90px;
   font-size: 18px;
 }
 
+.payment{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  padding: 0px 20px 10px;
+}
 }
