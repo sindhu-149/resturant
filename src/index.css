@@ -419,10 +419,11 @@ font-size: 18px;
 .item{
   text-align: right;
   background-color: white;
-  border: 0px solid black;
+  border: none;
   border-radius: 20px;
   margin: 8px auto;
   padding:10px 10px;
+  white-space: nowrap;
 }
 
 .item:hover{
