@@ -780,11 +780,9 @@ padding: 10px 40px;
 
 .cart-cards{   
     padding:18px;
-    background-color: white;
-    height: 900px;  
-    overflow-y: auto;         
+    background-color: white;       
 }
-.cart-cards::-webkit-scrollbar {
+/* .cart-cards::-webkit-scrollbar {
   width: 7px;
   height: 15px;
 }
@@ -802,7 +800,7 @@ padding: 10px 40px;
 
 .cart-cards::-webkit-scrollbar-thumb:hover {
   background: #FFC93C;
-}
+} */
 
 .cart-list{
   background-color: #ECECEC;
@@ -1089,7 +1087,7 @@ padding-right: 90px;
 
 .cart-cards{
   background-color: white;
-  padding: 50px 18px;
+  padding: 0px 18px 30px;
   overflow-y: auto;
   height: 700px;
   /* position: fixed; */
