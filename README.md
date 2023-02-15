@@ -1,4 +1,4 @@
-# Steps to setip in localhost 
+# Steps to setup in localhost 
 
 ## npm install
 
