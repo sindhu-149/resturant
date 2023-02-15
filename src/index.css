@@ -1077,7 +1077,7 @@ padding-right: 90px;
 .cart-cards{
   background-color: white;
   padding: 0px 18px;
-  height:70%;
+  height:600px;
   overflow-y: auto;
   position: fixed;
   left:0;
