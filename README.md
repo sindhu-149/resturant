@@ -1,4 +1,4 @@
-# Jobify
+# Wotm ( What's the menu )
 
 ### This website serves as a digital menu platform for restaurants.
 
