@@ -1,4 +1,4 @@
-# Wotm ( What's the menu )
+# Wotm ( What's on the menu )
 
 ### This website serves as a digital menu platform for restaurants.
 
